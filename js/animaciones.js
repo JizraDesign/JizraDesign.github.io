@@ -1,11 +1,8 @@
 const headerTitle = document.querySelector('.header__title'),
     wave = document.querySelectorAll('.wave__banner'),
     navItem = document.querySelectorAll('.nav__link'),
-    contactoInput = document.querySelectorAll('.contacto__input'),
-    contactoLabel = document.querySelectorAll('.contacto__label'),
-    contactoForm = document.querySelector('.contacto__form'),
-    interruptor = document.querySelectorAll('.interruptor'),
-    interruptorBtn = document.querySelectorAll('.interruptor span');
+    interruptor = document.querySelector('.interruptor'),
+    interruptorBtn = document.querySelector('.interruptor__selector');
 //animacion waves del bammer
 for(let i = 0; i < wave.length; i++){
     wave[i].style.animation = `waves 30s ease ${0.3 * i}s infinite`;
@@ -13,7 +10,7 @@ for(let i = 0; i < wave.length; i++){
 // subir
 window.addEventListener('scroll', up);
 function up(){
-    let cpP = document.querySelector('#galeria');
+    let cpP = document.querySelector('#covid');
     let distacia = cpP.getBoundingClientRect().top;
     if(distacia <= 0){
         document.querySelector('.btn__up').classList.add('visible');
@@ -86,40 +83,38 @@ navItem.forEach(btn=>{
         e.target.classList.add('active');
     });
 });
-// input de contacto
-for(let i = 0; i < contactoInput.length; i++){
-    contactoInput[i].addEventListener('keyup', () => {
-        if(contactoInput[i].value != ''){
-            contactoLabel[i].classList.add('active');
-        }else{
-            contactoLabel[i].classList.remove('active');
-        }
-    });
-};
-contactoForm.addEventListener('submit', e => {
-    e.preventDefault();
+// themes
+if(localStorage.getItem('theme') === 'dark'){
+    interruptorBtn.classList.remove('left');
+    interruptorBtn.classList.add('center');
+    document.body.classList.add('darkTheme');
+}else if(localStorage.getItem('theme') === 'light'){
+    interruptorBtn.classList.remove('left');
+    interruptorBtn.classList.add('right');
+    document.body.classList.add('clearTheme');
+}
+interruptor.addEventListener('click', e => {
+    theme();
 });
 
-for(let i = 0; i < interruptor.length; i++){
-    interruptor[i].addEventListener('click', e => {
-        for(let x of interruptor){
-            x.style.background = '';
-        };
-        for(let x of interruptorBtn){
-            x.classList.remove('active');
-        };
-        interruptorBtn[i].classList.add('active');
-        interruptor[i].style.background = '#6eb4f5';
-        let theme = interruptor[i].id;
-        if(theme === 'dark'){
-            document.body.classList.remove('clearTheme');
-            document.body.classList.add('darkTheme');
-        }else if(theme === 'clear'){
-            document.body.classList.remove('darkTheme');
-            document.body.classList.add('clearTheme');
-        }else{
-            document.body.classList.remove('darkTheme');
-            document.body.classList.remove('clearTheme');
-        }
-    });
+function theme(){
+    if(interruptorBtn.classList.contains('left')){
+        interruptorBtn.classList.remove('left');
+        interruptorBtn.classList.add('center');
+        document.body.classList.remove('clearTheme');
+        document.body.classList.add('darkTheme');
+        localStorage.setItem('theme', 'dark');
+    }else if(interruptorBtn.classList.contains('center')){
+        interruptorBtn.classList.remove('center');
+        interruptorBtn.classList.add('right');
+        document.body.classList.remove('darkTheme');
+        document.body.classList.add('clearTheme');
+        localStorage.setItem('theme', 'light');
+    }else if(interruptorBtn.classList.contains('right')){
+        interruptorBtn.classList.remove('right');
+        interruptorBtn.classList.add('left');
+        document.body.classList.remove('darkTheme');
+        document.body.classList.remove('clearTheme');
+        localStorage.setItem('theme', 'false');
+    };
 };

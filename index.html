@@ -23,26 +23,6 @@
                         <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
                     </ul>
                 </nav>
-                <ul class="nav__lista-opt">
-                    <li class="nav__item-opt">
-                        <div id="contraste" class="interruptor" style="background:#6eb4f5">
-                            <span class="active"></span>
-                        </div>
-                        <span>A. Contraste</span> 
-                    </li>
-                    <li class="nav__item-opt">
-                        <div id="dark" class="interruptor">
-                            <span></span>
-                        </div>
-                        <span>Dark</span> 
-                    </li>
-                    <li class="nav__item-opt">
-                        <div id="clear" class="interruptor">
-                            <span></span>
-                        </div>
-                        <span>Light</span> 
-                    </li>
-                </ul>
             </div>
         </header>
         <div class="banner__background">
@@ -62,7 +42,39 @@
         </svg>
         <h1 class="banner__title sub">Jizra<span class="banner__title-span"> Design</span></h1>
         <h1 class="banner__title">Diseño y programación<br><span class="banner__title-span">Web</span></h1>
+        <ul class="nav__lista-opt">
+            <div class="nav__item-opt">
+                <span>Theme :</span>
+                <span style="margin-left: 40px;">Dark</span>
+            </div>
+            <li class="nav__item-opt">
+                <span>A. Contraste</span>
+                <div id="theme" class="interruptor">
+                    <span class="interruptor__selector left"></span>
+                </div>
+                <span>Light</span> 
+            </li>
+        </ul>
     </section>
+    <article id="covid" class="article">
+        <h1 class="article__title">Estadísticas Covid-19 México</h1>
+        <ul class="item-left lista">
+            <p class="lista__parrafo">Tecnologías usadas (para este ejemplo)</p>
+            <li class="lista__item"><span class="lista__icono">
+                <img src="imagenes/html.png" alt="HTML 5"></span>HTML 5
+            </li>
+            <li class="lista__item"><span class="lista__icono">
+                <img src="imagenes/css.png" alt="CSS 3"></span>CSS 3
+            </li>
+            <li class="lista__item"><span class="lista__icono">
+                <img src="imagenes/javascript.png" alt="JAVASCRIPT"></span>JavaScript
+            </li>   
+        </ul>
+        <div class="item-rotate-left imagen">
+            <img src="imagenes/web-covid.jpg" alt="Covid-19">
+        </div>
+        <p class="article__parrafo">Sitio web informativo sobre la pandemia del <a href="https://jizradesign.github.io/covid-19/" target="_blank" rel="noopener">Covid-19</a></p>
+    </article>
     <article id="galeria" class="article">
         <h1 class="article__title">Galería Light Box</h1>
         <ul class="item-left lista">
@@ -76,7 +88,7 @@
             <li class="lista__item"><span class="lista__icono">
                 <img src="imagenes/javascript.png" alt="JAVASCRIPT"></span>JavaScript
             </li>
-            <li class="lista__item"><a href="https://jizradesign.github.io/light-box-gallery/" target="_Blank">Sitio</a></li>
+            <li class="lista__item"><a href="https://jizradesign.github.io/light-box-gallery/" target="_blank" rel="noopener">Sitio</a></li>
         </ul>
         <section id="gallery-light-box" class="item-rotate-right gallery-light-box center personalizado ">
             <article id="cont-gallery" class="center">
@@ -126,7 +138,7 @@
             <label for="test" class="btn__form-estados">Enviar</label>
             <input type="submit" id="test">
         </form>
-        <p class="article__parrafo">Tecnologías usadas</p>
+        <p class="article__parrafo">Direccion web del <a href="https://jizradesign.github.io/formulario-api-edos-mex/json/edos-municipios.json" target="_blank" rel="noopener">API de estados y municipios de México</a></p>
     </article>
     <article id="contacto" class="article">
         <h1 class="article__title">Contacto</h1>
@@ -156,6 +168,7 @@
                     <label class="contacto__label" for="mensaje">Mensaje</label>
                     <textarea name="mensaje" id="mensaje" class="contacto__input textarea"></textarea>
                 </div>
+                <div id="respuesta"></div>
                 <input type="submit" id="enviar" value="Enviar">
                 <label class="btn__form-contacto" for="enviar">Enviar</label>
             </form>
@@ -168,5 +181,6 @@
     <script src="https://jizradesign.github.io/releases/lightBox.js"></script>
     <script src="https://jizradesign.github.io/releases/social-bar.js"></script>
     <script src="js/estados.js"></script>
+    <script src="js/contacto.js"></script>
 </body>
 </html>

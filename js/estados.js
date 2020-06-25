@@ -1,5 +1,3 @@
-console.log('%c If you have to ask, you\'ll never know. If you know, you need only ask.','background: #000; color: #fff');
-console.log('%c propiedad de https://fb.me/jizradesign','background: #000; color: #fff');
 const estados = document.querySelector('#estado');
 const municipios = document.querySelector('#municipio');
 const inputMunicipio = document.querySelector('#input-municipio');

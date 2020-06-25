@@ -98,7 +98,11 @@ body{
                 0 0 25px #fff;
 }
 .nav__lista-opt{
+    position: absolute;
     width: 200px;
+    right: 0;
+    bottom: 0;
+    z-index: 15;
 }
 /*-----------------------------------------------------------------------------------------*/
 .nav__item-opt{
@@ -109,11 +113,11 @@ body{
     margin-bottom: 5px;
 }
 .interruptor{
-    width: 35px;
+    width: 50px;
     height: 20px;
     border: solid 1px #242526;
     border-radius: 15px;
-    background: #E9EBEE;
+    background: #6eb4f5;
     position: relative;
     transition: all .5s;
 }
@@ -126,11 +130,16 @@ body{
     border: solid 1px #000;
     background: #242526;
     top: 50%;
-    left: 3px;
     transform: translateY(-50%);
     transition: all 0.3s;
 }
-.interruptor span.active{
+.interruptor span.left{
+    left: 3px;
+}
+.interruptor span.center{
+    left: 35%;
+}
+.interruptor span.right{
     left: calc( 100% - 18px);
 }
 .nav__item-opt>span{
@@ -461,7 +470,24 @@ body{
 input[type="submit"]{
     display: none;
 }
-
+/*-------------------------------------------------------------------------------------*/
+/*----------------------------/-------------covid-19-----------/-----------------------*/
+/*-------------------------------------------------------------------------------------*/
+.imagen{
+    background: var(--fondo-Cl);
+    width: 90%;
+    min-width: 380px;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 var(--texto);
+    transition: all 0.5s;
+}
+.imagen img{
+    width: 100%;
+}
 /*-------------------------------------------------------------------------------------*/
 /*----------------------------/-------------boton up-----------/-----------------------*/
 /*-------------------------------------------------------------------------------------*/
@@ -613,6 +639,26 @@ input[type="submit"]{
 .contacto__input:focus {
     border-bottom: solid 2px var(--texto);
 }
+#respuesta{
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    height: 0px;
+    font-weight: 700;
+    overflow: hidden;
+}
+#respuesta.fail{
+    padding: 5px;
+    height: 30px;
+    background: rgb(255, 229, 246);
+    color: var(--texto-Scn);
+}
+#respuesta.send{
+    padding: 5px;
+    height: 30px;
+    background: rgb(212, 253, 219);
+    color: var(--texto-Scn);
+}
 .btn__form-contacto{
     color: var(--texto-Scn);
     width: 90%;
@@ -632,7 +678,7 @@ input[type="submit"]{
         max-width: 300px;
         margin: 0;
     }
-    .gallery-light-box.personalizado, .form-estados{
+    .gallery-light-box.personalizado, .form-estados, .imagen{
         width: 49%!important;
         margin: 0;
     }
