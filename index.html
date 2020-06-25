@@ -3,10 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
     <title>Jizra Design</title>
+    <meta name="description" content="Mi portafolio de diseño y programación web.">
+    <link rel="stylesheet" href="https://jizradesign.github.io/releases/social-bar.css">
+    <link rel="stylesheet" href="https://jizradesign.github.io/releases/lightBox.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1f8614daef.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <iframe src="https://jizratest.eu5.org/" frameborder="0"></iframe>
+<body class="">
+    <section class="banner">
+        <header id="header" class="header">
+            <div class="header__contenedor">
+                <nav id="nav" class="nav">
+                    <ul class="nav__lista">
+                        <li class="nav__item"><a href="#galeria" class="nav__link">Galería</a></li>
+                        <li class="nav__item"><a href="#form-edos" class="nav__link">Formulario estados</a></li>
+                        <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
+                    </ul>
+                </nav>
+                <ul class="nav__lista-opt">
+                    <li class="nav__item-opt">
+                        <div id="contraste" class="interruptor" style="background:#6eb4f5">
+                            <span class="active"></span>
+                        </div>
+                        <span>A. Contraste</span> 
+                    </li>
+                    <li class="nav__item-opt">
+                        <div id="dark" class="interruptor">
+                            <span></span>
+                        </div>
+                        <span>Dark</span> 
+                    </li>
+                    <li class="nav__item-opt">
+                        <div id="clear" class="interruptor">
+                            <span></span>
+                        </div>
+                        <span>Light</span> 
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="banner__background">
+            <img src="img/plans.jpg" alt="Banner">
+        </div>
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none" class="wave__banner">
+            <path class="wave__banner-path" d="M0,160L26.7,160C53.3,160,107,160,160,181.3C213.3,203,267,245,320,240C373.3,235,427,181,480,176C533.3,171,587,213,640,197.3C693.3,181,747,107,800,106.7C853.3,107,907,181,960,202.7C1013.3,224,1067,192,1120,160C1173.3,128,1227,96,1280,90.7C1333.3,85,1387,107,1413,117.3L1440,128L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path>
+        </svg>
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none" class="wave__banner">
+            <path class="wave__banner-path" d="M0,160L26.7,160C53.3,160,107,160,160,181.3C213.3,203,267,245,320,240C373.3,235,427,181,480,176C533.3,171,587,213,640,197.3C693.3,181,747,107,800,106.7C853.3,107,907,181,960,202.7C1013.3,224,1067,192,1120,160C1173.3,128,1227,96,1280,90.7C1333.3,85,1387,107,1413,117.3L1440,128L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path>
+        </svg>
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none" class="wave__banner">
+            <path class="wave__banner-path" d="M0,160L26.7,160C53.3,160,107,160,160,181.3C213.3,203,267,245,320,240C373.3,235,427,181,480,176C533.3,171,587,213,640,197.3C693.3,181,747,107,800,106.7C853.3,107,907,181,960,202.7C1013.3,224,1067,192,1120,160C1173.3,128,1227,96,1280,90.7C1333.3,85,1387,107,1413,117.3L1440,128L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path>
+        </svg>
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none" class="wave__banner">
+            <path class="wave__banner-path" d="M0,160L26.7,160C53.3,160,107,160,160,181.3C213.3,203,267,245,320,240C373.3,235,427,181,480,176C533.3,171,587,213,640,197.3C693.3,181,747,107,800,106.7C853.3,107,907,181,960,202.7C1013.3,224,1067,192,1120,160C1173.3,128,1227,96,1280,90.7C1333.3,85,1387,107,1413,117.3L1440,128L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path>
+        </svg>
+        <h1 class="banner__title sub">Jizra<span class="banner__title-span"> Design</span></h1>
+        <h1 class="banner__title">Diseño y programación<br><span class="banner__title-span">Web</span></h1>
+    </section>
+    <article id="galeria" class="article">
+        <h1 class="article__title">Galería Light Box</h1>
+        <ul class="item-left lista">
+            <p class="lista__parrafo">Tecnologías usadas</p>
+            <li class="lista__item"><span class="lista__icono">
+                <img src="img/html.png" alt="HTML 5"></span>HTML 5
+            </li>
+            <li class="lista__item"><span class="lista__icono">
+                <img src="img/css.png" alt="CSS 3"></span>CSS 3
+            </li>
+            <li class="lista__item"><span class="lista__icono">
+                <img src="img/javascript.png" alt="JAVASCRIPT"></span>JavaScript
+            </li>
+            <li class="lista__item"><a href="https://jizradesign.github.io/light-box-gallery/" target="_Blank">Sitio</a></li>
+        </ul>
+        <section id="gallery-light-box" class="item-rotate-right gallery-light-box center personalizado ">
+            <article id="cont-gallery" class="center">
+                <img class="front-gallery" src="img/galeria/100_4295.JPG" data-url-img="img/galeria/100_4295.JPG" data-title-img="Logan" data-desc-img="Logan DESC">
+                <img class="front-gallery" src="img/galeria/IMG_20191201_121724.jpg" data-url-img="img/galeria/IMG_20191201_121724.jpg" data-title-img="Logan" data-desc-img="Logan DESC">
+                <img class="front-gallery" src="img/galeria/IMG_20191201_125144.jpg" data-url-img="img/galeria/IMG_20191201_125144.jpg" data-title-img="Logan" data-desc-img="Logan DESC">
+                <img class="front-gallery" src="img/galeria/IMG_20200107_150205.jpg" data-url-img="img/galeria/IMG_20200107_150205.jpg" data-title-img="Logan" data-desc-img="Logan DESC">
+                <img class="front-gallery" src="img/galeria/IMG_20200105_142040.jpg" data-url-img="img/galeria/IMG_20200105_142040.jpg" data-title-img="Logan" data-desc-img="Logan DESC">
+                <img class="front-gallery" src="img/galeria/IMG_20191201_132814.jpg" data-url-img="img/galeria/IMG_20191201_132814.jpg" data-title-img="Logan" data-desc-img="Logan DESC">
+            </article>
+        </section>
+        <p class="article__parrafo">Tecnologías usadas</p>
+    </article>
+    <article id="form-edos" class="article">
+        <h1 class="article__title"> Formulario api de Estados y municipios de México</h1>
+        <ul class="item-left lista">
+            <p class="lista__parrafo">Tecnologías usadas (para este ejemplo)</p>
+            <li class="lista__item"><span class="lista__icono">
+                <img src="img/html.png" alt="HTML 5"></span>HTML 5
+            </li>
+            <li class="lista__item"><span class="lista__icono">
+                <img src="img/css.png" alt="CSS 3"></span>CSS 3
+            </li>
+            <li class="lista__item"><span class="lista__icono">
+                <img src="img/javascript.png" alt="JAVASCRIPT"></span>JavaScript
+            </li>   
+        </ul>
+        <form class="item-rotate-left form-estados" id="form-estados">
+            <div class="banner__form-estados">
+                <h1 class="title__form-estados">Selecciona tu estado y municipio</h1>
+            </div>
+            <label for="estado" class="etiqueta__form-estados">Estado :</label>
+            <div class="cont__form-estados select">
+                <select id="estado" name="estado" class="select__form-estados">
+                    <option disabled selected>Selecciona tu estado</option>
+                </select>
+                <span class="icon__form-estados"><i class="fas fa-chevron-down"></i></i></span>
+            </div>
+            <label for="municipio" class="etiqueta__form-estados">Delegación o Municipio :</label>
+            <div class="cont__form-estados select">
+                <select id="municipio" name="municipio" class="select__form-estados">
+                    <option disabled selected>Selecciona tu municipio</option>
+                    <optgroup id="input-municipio"></optgroup>
+                </select>
+                <span class="icon__form-estados"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <label for="test" class="btn__form-estados">Enviar</label>
+            <input type="submit" id="test">
+        </form>
+        <p class="article__parrafo">Tecnologías usadas</p>
+    </article>
+    <article id="contacto" class="article">
+        <h1 class="article__title">Contacto</h1>
+        <div class="item-right contacto">
+            <div class="contacto__mensaje">
+                <h2 class="contacto__mensaje-title">Información de contacto</h2>
+                <ul class="contacto__mensaje-lista">
+                    <li class="contacto__mensaje-item"><i class="far fa-id-card"></i><span class="contacto__mensaje-link">Eduardo Hérnandez</span></li>
+                    <li class="contacto__mensaje-item"><i class="far fa-envelope-open"></i><a class="contacto__mensaje-link" href="mailto:jizradesign@gmail.com">email</a></li>
+                    <li class="contacto__mensaje-item"><i class="fas fa-phone"></i><a class="contacto__mensaje-link" href="tel:+525519662292">5519662292</a></li>
+                </ul>
+            </div>
+            <form class="contacto__form">
+                <div class="contacto__contenedor-input">
+                    <label class="contacto__label" for="nombre">Nombre(s)</label>
+                    <input type="text" id="nombre" name="nombre" class="contacto__input">
+                </div>
+                <div class="contacto__contenedor-input">
+                    <label class="contacto__label" for="email">Email</label>
+                    <input type="email" id="email" name="email" class="contacto__input">
+                </div>
+                <div class="contacto__contenedor-input">
+                    <label class="contacto__label" for="tel">Teléfono</label>
+                    <input type="tel" id="tel" name="tel" class="contacto__input">
+                </div>
+                <div class="contacto__contenedor-input textarea">
+                    <label class="contacto__label" for="mensaje">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje" class="contacto__input textarea"></textarea>
+                </div>
+                <input type="submit" id="enviar" value="Enviar">
+                <label class="btn__form-contacto" for="enviar">Enviar</label>
+            </form>
+        </div>
+    </article>
+    <div class="btn__up">
+        <div class="btn__up__contenedor"><i class="fas fa-angle-up"></i></div>
+    </div>
+    <script src="js/animaciones.js"></script>
+    <script src="https://jizradesign.github.io/releases/lightBox.js"></script>
+    <script src="https://jizradesign.github.io/releases/social-bar.js"></script>
+    <script src="js/estados.js"></script>
 </body>
 </html>
