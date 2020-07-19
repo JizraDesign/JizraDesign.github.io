@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)!important;
 }
 :root{
     --coloroff: rgb(159, 191, 252);
@@ -185,36 +186,36 @@ body{
     width: 150%;
     height: 200px;
 }
-.wave__banner:nth-child(3){
+.wave__banner:nth-child(1){
     z-index: 5;
     transform: translate(-20%, -5px);
 }
-.wave__banner:nth-child(3) .wave__banner-path{
+.wave__banner:nth-child(1) .wave__banner-path{
     fill: #fff;
     fill-opacity: 0.5;
 }
-.wave__banner:nth-child(4){
+.wave__banner:nth-child(2){
     z-index: 7;
     transform: translate(-20%, 5px);
 }
-.wave__banner:nth-child(4) .wave__banner-path{
+.wave__banner:nth-child(2) .wave__banner-path{
     fill: #000;
     fill-opacity: 0.5;
     width: 100%;
 }
-.wave__banner:nth-child(5){
+.wave__banner:nth-child(3){
     z-index: 10;
     transform: translate(-20%, 10px);
 }
-.wave__banner:nth-child(5) .wave__banner-path{
+.wave__banner:nth-child(3) .wave__banner-path{
     fill: #000;
     fill-opacity: 0.5;
 }
-.wave__banner:nth-child(6){
+.wave__banner:nth-child(4){
     z-index: 15;
     transform: translate(-20%, 25px);
 }
-.wave__banner:nth-child(6) .wave__banner-path{
+.wave__banner:nth-child(4) .wave__banner-path{
     fill: var(--fondo);
     fill-opacity: 1;
 }
