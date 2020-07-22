@@ -7,6 +7,7 @@
     <meta name="description" content="Mi portafolio de diseño y programación web.">
     <link rel="stylesheet" href="https://jizradesign.github.io/releases/social-bar.css">
     <link rel="stylesheet" href="https://jizradesign.github.io/releases/lightBox.css">
+    <link rel="stylesheet" href="https://jizradesign.github.io/releases/carrusel-pag.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
@@ -21,6 +22,8 @@
                         <li class="nav__item"><a href="#galeria" class="nav__link">Galería</a></li>
                         <li class="nav__item"><a href="#form-edos" class="nav__link">Formulario estados</a></li>
                         <li class="nav__item"><a href="#contacto" class="nav__link">Contacto</a></li>
+                        <li class="nav__item"><a href="#slide" class="nav__link">Slider</a></li>
+
                     </ul>
                 </nav>
             </div>
@@ -155,6 +158,60 @@
                 <a class="btn" download href="https://jizradesign.github.io/formulario-api-edos-mex/json/edos-municipios.json" target="_blank" rel="noopener"><span class="text__btn">Download</span></a></p>
             </span>
     </article>
+    <article id="slide" class="article">
+        <h1 class="article__title"> Slider Infinito</h1>
+        <ul class="item-left lista">
+            <p class="lista__parrafo">Tecnologías usadas (para este ejemplo)</p>
+            <li class="lista__item"><span class="lista__icono">
+                <img src="imagenes/html.png" alt="HTML 5"></span>HTML 5
+            </li>
+            <li class="lista__item"><span class="lista__icono">
+                <img src="imagenes/css.png" alt="CSS 3"></span>CSS 3
+            </li>
+            <li class="lista__item"><span class="lista__icono">
+                <img src="imagenes/javascript.png" alt="JAVASCRIPT"></span>JavaScript
+            </li>   
+        </ul>
+        <section id="jd-carrusel" class="center">
+            <article class="jd-item__carrusel">
+                <div class="jd-cont__text">
+                    <h2 class="jd-title__carrusel">Lorem ipsum .</h2>
+                    <p class="jd-paragraph__carrusel">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti provident facere mollitia rerum fuga nihil praesentium obcaecati consequuntur soluta quibusdam laborum culpa rem, possimus illum, dicta laudantium? Tempore, iste magnam.</p>
+                </div>
+                <div class="jd-cont__img">
+                    <img class="jd-img__carrusel" loading="lazy" src="imagenes/galeria/IMG_20191029_180530.jpg">
+                </div>
+            </article>
+            <article class="jd-item__carrusel">
+                <div class="jd-cont__text">
+                    <h2 class="jd-title__carrusel">Lorem ipsum .</h2>
+                    <p class="jd-paragraph__carrusel">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti provident facere mollitia rerum fuga nihil praesentium obcaecati consequuntur soluta quibusdam laborum culpa rem, possimus illum, dicta laudantium? Tempore, iste magnam.</p>
+                </div>
+                <div class="jd-cont__img">
+                    <img class="jd-img__carrusel" loading="lazy" src="imagenes/galeria/IMG_20191214_205726.jpg">
+                </div>
+            </article>
+            <article class="jd-item__carrusel">
+                <div class="jd-cont__text">
+                    <h2 class="jd-title__carrusel">Lorem ipsum .</h2>
+                    <p class="jd-paragraph__carrusel">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti provident facere mollitia rerum fuga nihil praesentium obcaecati consequuntur soluta quibusdam laborum culpa rem, possimus illum, dicta laudantium? Tempore, iste magnam.</p>
+                </div>
+                <div class="jd-cont__img">
+                    <img class="jd-img__carrusel" loading="lazy" src="imagenes/galeria/IMG_20200223_183202.jpg">
+                </div>
+            </article>
+            <div class="jd-item__carrusel">
+                <iframe src="https://www.youtube.com/embed/Pkh8UtuejGw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        </div>
+            <div class="center dedo-swipe animacion">
+                <div class="dedo"><i class="fas fa-hand-point-up"></i></div>
+            </div>
+        </section>
+        <p class="article__parrafo">Plugin de Slider (carrusel infinito). Próxima publicación
+            <span class="cont__btn">
+                <a class="btn" href="#slide" target="_blank" rel="noopener"><span class="text__btn">Sitio</span></a>
+            </span>
+        </p>
+    </article>
     <article id="contacto" class="article">
         <h1 class="article__title">Contacto</h1>
         <div class="item-right contacto">
@@ -198,6 +255,7 @@
     <script src="js/estados.js"></script>
     <script src="js/contacto.js"></script>
     <script src="https://jizradesign.github.io/releases/lightBox.js"></script>
+    <script src="https://jizradesign.github.io/releases/carrusel-pag.js"></script>
     <script src="https://jizradesign.github.io/releases/social-bar.js"></script>
 </body>
 </html>
