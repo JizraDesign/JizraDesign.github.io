@@ -712,6 +712,10 @@ input[type="submit"]{
     cursor: pointer;
 }
 /* >>>>> -->>>>> ----- slider ----- <<<<<-- <<<<< */
+#jd-carrusel{
+    box-shadow: 0 0 10px 0 var(--texto);
+    border-radius: 5px;
+}
 .jd-title__carrusel {
     padding: 10px;
     text-shadow: 0 0 5px rgba(0, 0, 0, .7);
