@@ -39,6 +39,7 @@ html{
     margin-top: 15px;
 }
 .btn{
+    display:inline-block;
     width: 150px;
     height: 40px;
     text-align: center;
@@ -51,6 +52,13 @@ html{
 .btn:hover,.btn:active{
     color: #fff;
     background: skyblue;
+}
+.text__btn{
+    color: skyblue;
+    padding: 5px;
+}
+.btn:hover .text__btn,.btn:active .text__btn{
+    color: #fff;
 }
 body{
     width: 100%;
@@ -643,6 +651,7 @@ input[type="submit"]{
     height: 100%;
     display: flex;
     align-items: center;
+    z-index: 1;
     transition: all linear 0.3s;
 }
 .contacto__input{
@@ -655,11 +664,13 @@ input[type="submit"]{
     border: none;
     outline: none;
     border-bottom: solid 2px gray;
+    z-index: 5;
     transition: all linear 0.3s;
 }
 .contacto__label.active{
     font-size: .7em;
     color: red;
+    z-index: 5;
     transform: translateY(-50%);
 }
 .contacto__input.textarea{
