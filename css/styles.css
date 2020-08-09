@@ -271,6 +271,11 @@ body{
     top: calc(10vh + 5%);
     font-size: 1.8em;
 }
+/* >>>>> -->>>>> ----- comunidad  ----- <<<<<-- <<<<< */
+.colecciones{
+    background: var(--fondo);
+    width: 100%;
+}
 /*----------------------------------------------------------------------------------------*/
 /*---------------------------------------articulos----------------------------------------*/
 /*----------------------------------------------------------------------------------------*/
@@ -754,6 +759,12 @@ input[type="submit"]{
     min-height: 50%;
     margin: auto;
 }
+/* >>>>> -->>>>> ----- memorama ----- <<<<<-- <<<<< */
+.cont_memorama.personalizado{
+    width: 90%;
+    height: 600px;
+    margin: auto;
+}
 
 @media (min-width:688px){
     .article{
@@ -766,7 +777,8 @@ input[type="submit"]{
     .jd-gallery__light__box.personalizado.personalizado, 
     .form-estados, 
     .imagen,
-    #jd-carrusel{
+    #jd-carrusel,
+    .cont_memorama.personalizado{
         width: 49%!important;
         margin: 0;
     }
