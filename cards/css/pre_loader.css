@@ -1,0 +1,120 @@
+/*-------------------preloader-------------------*/
+.preLoader {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+                
+    position: fixed;
+    z-index: 10000;
+}
+.cont_gato {
+    width: 100%;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.preLoader .gato {
+    width: 75%;
+    max-width: 600px;           
+    animation: gato 5s ease forwards;
+}
+/*.cont_textos{
+    position: absolute;
+    bottom: 0;
+    padding: 100px 30px;
+    width: 100%;
+}
+.preLoader .texto {
+    width: 100%;
+    position: relative;
+    opacity: 0;
+    transform: translateY(106%);
+    
+    animation: texto 2s ease forwards;
+    animation-delay: 5s;
+}
+.preLoader .texto_gato {
+    width: 100%;
+    opacity: 0;
+    
+    animation: texto_gato 4s ease forwards;
+    animation-delay: 6s;
+}
+.preLoader .dyD {
+    width: 100%;
+    padding: 0px 25px;
+    opacity: 0;
+    
+    animation: dyD 3s ease forwards;
+    animation-delay: 7s;
+}
+
+@media (min-width: 1000px) {
+    .cont_gato {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .preLoader .gato {
+        width: 100%;
+    }
+    .cont_textos {
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        max-width: 700px;
+    }
+    
+}*/
+.cerrar {
+    transform: translateY(-100%);
+    transition: all 0.5s;
+}
+/*------------------------------------*/
+/*-------------Animacion-------------*/
+/*------------------------------------*/
+
+/*------------imagen gato------------*/
+@keyframes gato {0%{transform:rotate(0deg);-webkit-clip-path:polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%);clip-path:polygon(50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%);}
+16%{-webkit-clip-path:polygon(50% 0%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%);clip-path:polygon(50% 0%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%);}
+32%{-webkit-clip-path:polygon(50% 0%, 100% 25%, 50% 50%, 50% 50%, 50% 50%, 50% 50%);clip-path:polygon(50% 0%, 100% 25%, 50% 50%, 50% 50%, 50% 50%, 50% 50%);}
+48%{-webkit-clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 50%, 50% 50%, 50% 50%);clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 50%, 50% 50%, 50% 50%);}
+64%{-webkit-clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 50% 50%, 50% 50%);clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 50% 50%, 50% 50%);}
+80%{-webkit-clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 50% 50%);clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 50% 50%);}
+100%{transform:rotate(-360deg);-webkit-clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);}
+    
+}
+/*------------texto dialxa------------
+@keyframes texto {
+    from {
+        opacity: 0;
+        transform: rotateX(90deg) translateY(106%);
+    }
+    95% {
+        opacity: 1;
+        transform: rotateX(0) translateY(106%);
+    }
+    to {
+        opacity: 1;
+    }
+    
+}
+dexto dialxa con imagen del gato en D
+@keyframes texto_gato {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+------texto diseño y desarrolo------
+@keyframes dyD {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}/*

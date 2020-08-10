@@ -1,0 +1,462 @@
+body{
+	background: rgba(179,228,245,1);
+	animation: cielo 4s linear forwards;
+	animation-delay: 11s;
+}
+@keyframes cielo {
+	100%{background: rgba(0,0,0,1);}
+}
+main {
+	max-width: 1000px;
+	position: relative;
+	margin: auto;
+	overflow: hidden;
+}
+main:after {
+	content: "";
+	width: 100%;
+	height: 300vh;
+	
+	top: -100%;
+	left: 0;
+	position: absolute;
+	z-index: -1;
+	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(168,207,255,1) 41%, rgba(199,234,245,1) 50%, rgba(168,207,255,1) 79%, rgba(39,169,230,1) 100%);
+	animation: degradado 7s linear forwards;
+	animation-delay: 11s;
+}
+@keyframes degradado {
+	0% {
+		top: -100%;
+	}
+	100% {
+		top: 0;
+	}
+}
+#sol {
+	position: absolute;
+	opacity: 0;
+	animation: sol 5s linear forwards;
+	animation-delay: 10s;
+}
+#sol .cuerpo {
+	width: 100px;
+	height: 100px;
+
+	border-radius: 50%;
+	background: yellow;
+	box-shadow: inset 0px 0px 50px 15px rgba(240, 119, 28,.5),
+				0px 0px 25px 5px rgba(240, 119, 28,.0);
+
+	position: relative;
+
+	animation: corona 2s linear infinite;
+	animation-delay: 10s;
+}
+@keyframes corona {
+	0% {
+		box-shadow: inset 0px 0px 50px 15px rgba(240, 119, 28,.5),
+						 0px 0px 25px 5px rgba(240, 119, 28,.0);
+	}
+	25% {
+		box-shadow: inset 0px 0px 50px 15px rgba(240, 119, 28,.5),
+						 0px 0px 50px 10px rgba(240, 119, 28,.5);
+	}
+	50% {
+		box-shadow: inset 0px 0px 50px 15px rgba(240, 119, 28,.5),
+						 0px 0px 100px 15px rgba(240, 119, 28,.7);
+	}
+	75% {
+		box-shadow: inset 0px 0px 50px 15px rgba(240, 119, 28,.5),
+						 0px -0px 50px 10px rgba(240, 119, 28,.5);
+	}
+	100% {
+		box-shadow: inset 0px 0px 50px 15px rgba(240, 119, 28,.5),
+						 0px 0px 25px 5px rgba(240, 119, 28,.0);
+	}
+}
+#sol .l_izq {
+	width: 30px;
+	height: 30px;
+	border-radius: 10px 10px 50% 50%;
+	background: black;
+	padding-bottom: 5px;
+	position: absolute;
+	top: 25px;
+	left: 12px;
+}
+#sol .l_der {
+	width: 30px;
+	height: 30px;
+	border-radius: 10px 10px 50% 50%;
+	background: black;
+	padding-bottom: 5px;
+	position: absolute;
+	top: 25px;
+	left: 58px;
+}
+#sol .nariz {
+	width: 13px;
+	height: 15px;
+	border-radius: 5px 5px 50% 50%;
+	box-shadow: 0 1px 1px 0 rgba(240, 119, 28,.9);
+	padding-bottom: 5px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#sol .sonrisa {
+	width: 60px;
+	height: 25px;
+	border-radius: 10px 10px 50px 50px;
+	background: white;
+	box-shadow: inset 0 0 3px 1px rgba(240, 119, 28,.5);
+	padding-bottom: 5px;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+@keyframes sol {
+	0% {
+		opacity: 1;
+		left: 50%;
+		top: 50px;
+	}
+	100% {
+		opacity: 1;
+		left: 50px;
+		top: 150%;
+	}
+}
+#luna {
+	position: absolute;
+	opacity: 0;
+	animation: luna 5s linear forwards;
+	animation-delay: 16s;
+}
+#luna .cuerpo {
+	width: 100px;
+	height: 100px;
+
+	border-radius: 50%;
+	background: white;
+	box-shadow: inset 0px 0px 50px 15px rgba(0,0,0,.3),
+				0px 0px 25px 5px rgba(255,255,255,.9);
+
+	position: relative;
+}
+@keyframes luna {
+	0% {
+		opacity: 1;
+		left: 50px;
+		top: 110%;
+	}
+	100% {
+		opacity: 1;
+		left: 50%;
+		top: 50px;
+	}
+	
+}
+.nubes {
+	width: 100%;
+	height: 50vh;
+	padding: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: .9;
+	filter: brightness(100%);
+
+	animation: nubes 3s linear forwards;
+	animation-delay: 10s;
+}
+@keyframes nubes {
+	0% {
+		filter: brightness(100%);
+	}
+	100% {
+		filter: brightness(50%);
+	}
+}
+#nube_1 {
+	position: relative;
+	width: 100%;
+
+	animation: nube_1 120s linear infinite;
+}
+#nube_1 .esfera_1, #nube_2 .esfera_1, #nube_3 .esfera_1 {
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	left: 73px;
+	top: 50px;
+	z-index: 3;
+
+	background: rgba(255,255,255,1);
+	border-radius: 50%;
+	box-shadow: inset 1px -1px 0 0 blue;
+}
+#nube_1 .esfera_2, #nube_2 .esfera_2, #nube_3 .esfera_2 {
+	width: 45px;
+	height: 30px;
+	position: absolute;
+	left: 90px;
+	top: 50px;
+	z-index: 4;
+
+	background: rgba(255,255,255,1);
+	border-radius: 50%;
+	box-shadow: inset 1px -1px 0 0 blue;
+}
+#nube_1 .esfera_3, #nube_2 .esfera_3, #nube_3 .esfera_3 {
+	width: 60px;
+	height: 50px;
+	position: absolute;
+	left: 75px;
+	top: 20px;
+	z-index: 2;
+
+	background: rgba(255,255,255,1);
+	border-radius: 50%;
+	box-shadow: inset 1px 1px 0 0 blue;
+	
+}
+#nube_1 .esfera_4, #nube_2 .esfera_4, #nube_3 .esfera_4 {
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	left: 100px;
+
+	background: rgba(255,255,255,1);
+	border-radius: 50%;
+	box-shadow: inset 1px 1px 0 0 blue;	
+}
+#nube_1 .esfera_5, #nube_2 .esfera_5, #nube_3 .esfera_5 {
+	width: 50px;
+	height: 45px;
+	position: absolute;
+	left: 150px;
+	top: 20px;
+	z-index: 2;
+
+	background: rgba(255,255,255,1);
+	border-radius: 50%;
+	box-shadow: inset -1px 1px 0 0 blue;
+	
+}
+#nube_1 .esfera_6, #nube_2 .esfera_6, #nube_3 .esfera_6 {
+	width: 45px;
+	height: 30px;
+	position: absolute;
+	left: 125px;
+	top: 50px;
+	z-index: 4;
+
+	background: rgba(255,255,255,1);
+	border-radius: 50%;
+	box-shadow: inset -1px -1px 0 0 blue;
+}
+#nube_1 .esfera_7, #nube_2 .esfera_7, #nube_3 .esfera_7{
+	width: 40px;
+	height: 30px;
+	position: absolute;
+	left: 150px;
+	top: 50px;
+	z-index: 3;
+
+	background: rgba(255,255,255,1);
+	border-radius: 50%;
+	box-shadow: inset -1px -1px 0 0 blue;
+}
+@keyframes nube_1 {
+	0% {
+		margin: 10px 0 5px 0;
+	}
+	50% {
+		margin: 15px 0 0 500px;
+	}
+	100% {
+		margin: 10px 0 5px 0;
+	}
+}
+#nube_2 {
+	position: relative;
+	top: 100px;
+	width: 100%;
+
+	animation: nube_2 120s linear infinite;
+}
+@keyframes nube_2 {
+	0% {
+		margin: 0 0 10px -50px;
+	}
+	50% {
+		margin: 15px 0 0 100%;
+	}
+	100% {
+		margin: 0 0 10px -50px;
+	}
+}
+#nube_3 {
+	position: relative;
+	top: 150px;
+	width: 100%;
+
+	animation: nube_3 120s linear infinite;
+}
+@keyframes nube_3 {
+	0% {
+		margin: 0 0 0 200px;
+	}
+	50% {
+		margin: 0 0 0 80%;
+	}
+	100% {
+		margin: 0 0 0 200px;
+	}
+}
+
+.buenos_dias {
+	text-align: center;
+	opacity: 0;
+	animation: dias 5s linear forwards;
+	animation-delay: 14s;
+}
+@keyframes dias {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.buenos_dias h1 {
+	color: white;
+	font-size: 52px;
+	text-shadow: 1px 1px 1px blue;
+}
+.buenos_dias p {
+	color: white;
+	font-size: 22px;
+	text-shadow: 1px 1px 1px blue;
+	transform: scale(0);
+
+	animation: parrafo 2s linear forwards;
+	animation-delay: 17s;
+}
+@keyframes parrafo {
+	0% {
+		transform: scale(0);
+	}
+	70% {
+		transform: scale(1.5);
+	}
+	85% {
+		transform: scale(.7);
+	}
+	95% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+footer {
+	background: none;
+}
+@media (min-width: 756px) {
+	main {
+	}
+	#sol {
+		transform: scale(2);
+	}
+	#luna {
+		transform: scale(2);
+	}
+	@keyframes sol {
+		0% {
+			opacity: 1;
+			left: 50%;
+			top: 50px;
+		}
+		100% {
+			opacity: 1;
+			left: 50px;
+			top: 150%;
+		}
+	}
+	#nube_1 {
+		transform: scale(1.5);
+		animation: nube_1 60s linear infinite;
+	}
+	#nube_2 {
+		transform: scale(1.1);
+		animation: nube_2 60s linear infinite;
+	}
+	#nube_3 {
+		transform: scale(1.2);
+		animation: nube_3 60s linear infinite;
+	}
+	.buenos_dias h1 {
+		font-size: 100px;
+	}
+	.buenos_dias p {
+		font-size: 40px;
+	}
+}
+.puff {
+	position: absolute;
+	bottom: 10vh;
+	width: 100%;
+}
+.puff img {
+	width: 100px;
+	animation: puff 10s linear forwards;
+    opacity: 0;
+	animation-delay: 10s;
+}
+@keyframes puff {
+	0% {
+		transform: translate(-50%, -50%);
+        opacity: 1;
+	}
+	10% {
+		transform: translate(50%, 0%);
+	}
+	20% {
+		transform: translate(100%, -50%);
+	}
+	30% {
+		transform: translate(150%, 0%);
+	}
+	40% {
+		transform: translate(200%, -30%);
+	}
+	50% {
+		transform: translate(300%, 0%);
+	}
+	60% {
+		transform: translate(350%, -40%) rotateY(180deg);
+	}
+	70% {
+		transform: translate(200%, -30%);
+	}
+	80% {
+		transform: translate(300%, 0%);
+	}
+	90% {
+		transform: translate(200%, -30%) rotateY(180deg);
+	}
+	100% {
+		transform: translate(150%, 0%)rotateY(180deg);
+        opacity: 1;
+	}
+}
+@media (min-width: 1080px) {
+	.puff img {
+		width: 250px;
+	}
+}
