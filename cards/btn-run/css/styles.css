@@ -62,7 +62,8 @@ body{
     background-position: center center;
     border-radius: 15px;
 }
-.box > header{
+.box>header{
+    position: static;
     align-items: center;
     border-radius: 15px 15px 0 0;
     font-family: 'Dancing Script';
@@ -124,6 +125,7 @@ article{
     align-items: center;
     background: rgba(0,0,0,.9);
     overflow: hidden;
+    z-index: 50;
     transition: all .3s ease-in-out;
 }
 .cont_modal{
