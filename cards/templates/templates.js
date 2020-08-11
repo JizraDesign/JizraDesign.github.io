@@ -46,7 +46,6 @@ function preloader(){
 };
 function header(){
     const url = window.location.href;
-    console.log(url);
     const header = document.querySelector('#header');
     let contHeader = header.appendChild(document.createElement('div'));
         contHeader.setAttribute('class', 'cont_header');
@@ -59,7 +58,7 @@ function header(){
         link.setAttribute('class', '');
         link.setAttribute('target', '_blank');
         link.setAttribute('title', 'Comparte en facebook');
-        link.setAttribute('href', url);
+        link.setAttribute('href', 'https://www.facebook.com/sharer/sharer.php?u='+url);
     let iconLInk = link.appendChild(document.createElement('i'));
         iconLInk.setAttribute('class', 'compartir_btn compartir_btn_facebook fa fa-facebook');
     // >>>>> -->>>>> ----- btn twiter ----- <<<<<-- <<<<<

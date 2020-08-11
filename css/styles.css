@@ -765,7 +765,12 @@ input[type="submit"]{
     height: 600px;
     margin: auto;
 }
-
+/* >>>>> -->>>>> ----- postales ----- <<<<<-- <<<<< */
+.cont__postal{
+    width: 90%;
+    height: 600px;
+    margin: auto;
+}
 @media (min-width:688px){
     .article{
         justify-content: space-around;
@@ -778,7 +783,8 @@ input[type="submit"]{
     .form-estados, 
     .imagen,
     #jd-carrusel,
-    .cont_memorama.personalizado{
+    .cont_memorama.personalizado,
+    .cont__postal{
         width: 49%!important;
         margin: 0;
     }
