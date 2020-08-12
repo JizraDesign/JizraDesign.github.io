@@ -600,6 +600,7 @@ input[type="submit"]{
 /*-------------------------------------------------------------------------------------*/
 #contacto{
     justify-content: center;
+    width: 100%;
 }
 .contacto{
     color: var(--texto-Scn);
@@ -766,10 +767,48 @@ input[type="submit"]{
     margin: auto;
 }
 /* >>>>> -->>>>> ----- postales ----- <<<<<-- <<<<< */
-.cont__postal{
-    width: 90%;
-    height: 600px;
+#postales{
+    width: 100%;
+    background: var(--fondo);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:  column;
+}
+.cont__colecciones{
+    position: relative;
+    display: flex;
+    align-self: flex-start;
+    flex-wrap: nowrap;
+    width: 95%;
+    max-width: 1000px;
+    height: 90vh;
+    border: solid 2px #fff;
+    border-radius: 10px;
+    background: red;
+    overflow: hidden;
     margin: auto;
+}
+.postal__item{
+    min-width: 100%;
+    height: 100%;
+    min-height: 50vh;
+    margin: 0;
+    padding: 0;
+}
+.postal__item .article__title{
+    margin: 0;
+}
+.postal__item .article__parrafo{
+    margin-top: 5px;
+}
+.cont__postal{
+    width: 100%;
+    min-height: 60vh;
+}
+.postal__item .cont__btn{
+    margin: 0;
 }
 @media (min-width:688px){
     .article{
@@ -783,8 +822,7 @@ input[type="submit"]{
     .form-estados, 
     .imagen,
     #jd-carrusel,
-    .cont_memorama.personalizado,
-    .cont__postal{
+    .cont_memorama.personalizado{
         width: 49%!important;
         margin: 0;
     }

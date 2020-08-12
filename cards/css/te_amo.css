@@ -10,9 +10,6 @@ body {
     background: black;
     background-image: url(../img/hearts-37308_960_720.png);
     transition: all 0.2s;
-    
-    animation: fondo 10s linear infinite;
-    animation-delay: 6s;
 }
 @keyframes fondo {
     0% {
@@ -75,10 +72,6 @@ body {
     transform: translateY(50%);
     filter: brightness(0);
     opacity: 0;
-    
-
-    animation: beso 5s linear forwards;
-    animation-delay: 8s;
 }
 .beso img {
     width: 100%;
