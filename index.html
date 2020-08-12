@@ -308,40 +308,42 @@
             </script>
         </div>
     </section>
-    <article id="contacto" class="article">
-        <h1 class="article__title">Contacto</h1>
-        <div class="item-right contacto">
-            <div class="contacto__mensaje">
-                <h2 class="contacto__mensaje-title">Información de contacto</h2>
-                <ul class="contacto__mensaje-lista">
-                    <li class="contacto__mensaje-item"><i class="far fa-id-card"></i><span class="contacto__mensaje-link">Eduardo Hérnandez</span></li>
-                    <li class="contacto__mensaje-item"><i class="far fa-envelope-open"></i><a class="contacto__mensaje-link" href="mailto:jizradesign@gmail.com">email</a></li>
-                    <li class="contacto__mensaje-item"><i class="fas fa-phone"></i><a class="contacto__mensaje-link" href="tel:+525519662292">5519662292</a></li>
-                </ul>
+    <section class="colecciones" id="contacto">
+        <article class="article">
+            <h1 class="article__title">Contacto</h1>
+            <div class="item-right contacto">
+                <div class="contacto__mensaje">
+                    <h2 class="contacto__mensaje-title">Información de contacto</h2>
+                    <ul class="contacto__mensaje-lista">
+                        <li class="contacto__mensaje-item"><i class="far fa-id-card"></i><span class="contacto__mensaje-link">Eduardo Hérnandez</span></li>
+                        <li class="contacto__mensaje-item"><i class="far fa-envelope-open"></i><a class="contacto__mensaje-link" href="mailto:jizradesign@gmail.com">email</a></li>
+                        <li class="contacto__mensaje-item"><i class="fas fa-phone"></i><a class="contacto__mensaje-link" href="tel:+525519662292">5519662292</a></li>
+                    </ul>
+                </div>
+                <form class="contacto__form">
+                    <div class="contacto__contenedor-input">
+                        <label class="contacto__label" for="nombre">Nombre(s)</label>
+                        <input type="text" id="nombre" name="nombre" class="contacto__input">
+                    </div>
+                    <div class="contacto__contenedor-input">
+                        <label class="contacto__label" for="email">Email</label>
+                        <input type="email" id="email" name="email" class="contacto__input">
+                    </div>
+                    <div class="contacto__contenedor-input">
+                        <label class="contacto__label" for="tel">Teléfono</label>
+                        <input type="tel" id="tel" name="tel" class="contacto__input">
+                    </div>
+                    <div class="contacto__contenedor-input textarea">
+                        <label class="contacto__label" for="mensaje">Mensaje</label>
+                        <textarea name="mensaje" id="mensaje" class="contacto__input textarea"></textarea>
+                    </div>
+                    <div id="respuesta"></div>
+                    <input type="submit" id="enviar" value="Enviar">
+                    <label class="btn__form-contacto" for="enviar">Enviar</label>
+                </form>
             </div>
-            <form class="contacto__form">
-                <div class="contacto__contenedor-input">
-                    <label class="contacto__label" for="nombre">Nombre(s)</label>
-                    <input type="text" id="nombre" name="nombre" class="contacto__input">
-                </div>
-                <div class="contacto__contenedor-input">
-                    <label class="contacto__label" for="email">Email</label>
-                    <input type="email" id="email" name="email" class="contacto__input">
-                </div>
-                <div class="contacto__contenedor-input">
-                    <label class="contacto__label" for="tel">Teléfono</label>
-                    <input type="tel" id="tel" name="tel" class="contacto__input">
-                </div>
-                <div class="contacto__contenedor-input textarea">
-                    <label class="contacto__label" for="mensaje">Mensaje</label>
-                    <textarea name="mensaje" id="mensaje" class="contacto__input textarea"></textarea>
-                </div>
-                <div id="respuesta"></div>
-                <input type="submit" id="enviar" value="Enviar">
-                <label class="btn__form-contacto" for="enviar">Enviar</label>
-            </form>
-        </div>
-    </article>
+        </article>
+    </section>
     <div class="btn__up">
         <div class="btn__up__contenedor"><i class="fas fa-angle-up"></i></div>
     </div>
