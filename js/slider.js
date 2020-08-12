@@ -160,7 +160,9 @@ function jdSider(padre,item,timer){
             movimiento(item,'next');
         }, timer);
     };
-    carrusel.addEventListener('mouseenter', () => clearInterval(mov));
+    carrusel.addEventListener('mouseenter', () => {
+        clearInterval(mov);
+    });
     carrusel.addEventListener('mouseleave', autoplay);
     autoplay();
 }
