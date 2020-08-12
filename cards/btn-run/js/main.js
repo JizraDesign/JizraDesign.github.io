@@ -42,7 +42,7 @@ function box(){
                 vib(btnNo);
                 mov(contBtnNo);
                 contBtnNo.classList.remove('start');
-                contBtnNo.classList.add('play');
+                contBtnNo.classList.add('go');
                 setTimeout(() => {
                     contBtnNo.classList.add('step_1');
                 }, 100);
