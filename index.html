@@ -7,10 +7,10 @@
     <meta name="description" content="Mi portafolio de diseño y programación web.">
     <link rel="stylesheet" href="https://jizradesign.github.io/releases/social-bar.css">
     <link rel="stylesheet" href="https://jizradesign.github.io/releases/lightBox.css">
-    <link rel="stylesheet" href="css/carrusel-pag.css">
+    <link rel="stylesheet" href="https://jizradesign.github.io/releases/jd-carrusel.min.css">
     <link rel="stylesheet" href="css/styles.css">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <meta name="theme-color" content="#000000">
 </head>
 <body>
@@ -84,7 +84,10 @@
             <div class="item-rotate-left imagen">
                 <img src="imagenes/web-covid.jpg" alt="Covid-19">
             </div>
-            <p class="article__parrafo">Sitio web informativo sobre la pandemia del <a href="https://jizradesign.github.io/covid-19/" target="_blank" rel="noopener">Covid-19</a></p>
+            <p class="article__parrafo">Sitio web informativo sobre la pandemia</p>
+            <span class="cont__btn">
+                <a class="btn" href="https://jizradesign.github.io/covid-19/" target="_blank" rel="noopener" title="Sitio web sobre Covid 19"><span class="text__btn">Sitio</span></a></p>
+            </span>
         </article>
         <article id="galeria" class="article">
             <h1 class="article__title">Galería Light Box</h1>
@@ -100,7 +103,8 @@
                     <img src="imagenes/javascript.png" alt="JAVASCRIPT"></span>JavaScript
                 </li>
                 <div class="cont__btn">
-                    <a class="btn" download="test" href="https://github.com/JizraDesign/light-box-gallery/archive/master.zip" target="_blank" rel="noopener"><span class="text__btn">Descargar proyecto</span></a>
+                    <a class="btn" href="https://github.com/JizraDesign/light-box-gallery" target="_blank" rel="noopener" title="GitHub"><span class="text__btn"><i class="fab fa-github"></i> GitHub</span></a>
+                    <a class="btn" download="test" href="https://github.com/JizraDesign/light-box-gallery/archive/master.zip" target="_blank" rel="noopener" title="Descargar proyecto"><span class="text__btn"><i class="fas fa-file-archive"></i> Descargar</span></a>
                 </div>
             </ul>
             <section id="jd-gallery__light__box" class="item-rotate-right jd-gallery__light__box center personalizado ">
@@ -113,10 +117,9 @@
                     <img class="jd-front__img__gallery" src="imagenes/galeria/IMG_20191201_132814.jpg" data-url-img="imagenes/galeria/IMG_20191201_132814.jpg" data-title-img="Logan" data-desc-img="Logan DESC">
                 </article>
             </section>
-            <p class="article__parrafo">Un plugin de una clásica galería de imágenes tipo lightBox.
-                Desarrollado en html, css y javasrcript su implementacion es muy sencilla, este plugin se encuentra en desarrollo</p>
+            <p class="article__parrafo">"Gallery Light Box by Jizra" es una galería de imágenes responsive de tipo light box construida en Html 5, Css 3 y javascript. Esta es la primera versión beta de esta galería por tanto cuenta con un funcionamiento muy básico, puede tener fallos y no funcionar en todos los navegadores.</p>
                 <span class="cont__btn">
-                    <a class="btn" href="https://jizradesign.github.io/light-box-gallery/" target="_blank" rel="noopener"><span class="text__btn">Sitio</span></a>
+                    <a class="btn" href="https://jizradesign.github.io/light-box-gallery/" target="_blank" rel="noopener" title="Sitio web"><span class="text__btn">Sitio</span></a>
                 </span>
             </p>
         </article>
@@ -132,7 +135,11 @@
                 </li>
                 <li class="lista__item"><span class="lista__icono">
                     <img src="imagenes/javascript.png" alt="JAVASCRIPT"></span>JavaScript
-                </li>   
+                </li>
+                <div class="cont__btn">
+                    <a class="btn" href="https://github.com/JizraDesign/formulario-api-edos-mex" target="_blank" rel="noopener" title="GitHub"><span class="text__btn"><i class="fab fa-github"></i> GitHub</span></a>
+                    <a class="btn" download="test" href="https://github.com/JizraDesign/formulario-api-edos-mex/archive/master.zip" target="_blank" rel="noopener" title="Descargar proyecto"><span class="text__btn"><i class="fas fa-file-archive"></i> Descargar</span></a>
+                </div>  
             </ul>
             <form class="item-rotate-left form-estados" id="form-estados">
                 <div class="banner__form-estados">
@@ -158,13 +165,13 @@
             </form>
             <p class="article__parrafo">Puedes usar el archivo json de los estados y municipios de México remotamente en https://jizradesign.github.io/formulario-api-edos-mex/json/edos-municipios.json o guardarlo (nunca se sabe cuando puedes requerir este tipo de archivos).
                 <span class="cont__btn">
-                    <a class="btn" download href="https://jizradesign.github.io/formulario-api-edos-mex/json/edos-municipios.json" target="_blank" rel="noopener"><span class="text__btn">Download</span></a></p>
+                    <a class="btn" href="https://jizradesign.github.io/formulario-api-edos-mex/" target="_blank" rel="noopener" title="Sitio web"><span class="text__btn">Sitio</span></a></p>
                 </span>
         </article>
         <article id="slide" class="article">
-            <h1 class="article__title"> Slider Infinito</h1>
+            <h1 class="article__title">Carrusel Infinito</h1>
             <ul class="item-left lista">
-                <p class="lista__parrafo">Tecnologías usadas (para este ejemplo)</p>
+                <p class="lista__parrafo">Tecnologías usadas</p>
                 <li class="lista__item"><span class="lista__icono">
                     <img src="imagenes/html.png" alt="HTML 5"></span>HTML 5
                 </li>
@@ -173,7 +180,11 @@
                 </li>
                 <li class="lista__item"><span class="lista__icono">
                     <img src="imagenes/javascript.png" alt="JAVASCRIPT"></span>JavaScript
-                </li>   
+                </li>
+                <div class="cont__btn">
+                    <a class="btn" href="https://github.com/JizraDesign/carrusel" target="_blank" rel="noopener" title="GitHub"><span class="text__btn"><i class="fab fa-github"></i> GitHub</span></a>
+                    <a class="btn" download="test" href="https://github.com/JizraDesign/light-box-gallery/archive/master.zip" target="_blank" rel="noopener" title="Descargar proyecto"><span class="text__btn"><i class="fas fa-file-archive"></i> Descargar</span></a>
+                </div> 
             </ul>
             <section id="jd-carrusel" class="center">
                 <article class="jd-item__carrusel">
@@ -215,9 +226,9 @@
                     jdSider('#jd-carrusel', 'jd-item__carrusel' ,'1500');
                 });
             </script>
-            <p class="article__parrafo">Plugin de Slider (carrusel infinito). Próxima publicación
+            <p class="article__parrafo">"Paginador tipo carrusel by Jizra" es un paginador horizontal con el clásico efecto de carrusel infinito construido en Html 5, Css 3 y javascript. Esta es la primera versión beta de este paginador por tanto cuenta con un funcionamiento muy básico, puede tener fallos y no funcionar en todos los navegadores.</p>
                 <span class="cont__btn">
-                    <a class="btn" href="#slide" target="_blank" rel="noopener"><span class="text__btn">Sitio</span></a>
+                    <a class="btn" href="https://jizradesign.github.io/carrusel/" target="_blank" rel="noopener" title="Sitio web"><span class="text__btn">Sitio</span></a>
                 </span>
             </p>
         </article>
@@ -225,7 +236,7 @@
     
     <section class="colecciones desing" id="design">
         <article class="article" id="juego-memorama">
-            <h1 class="article__title">Un juego "Memorama de animalitos sin animalitos"</h1>
+            <h2 class="article__title">Un juego "Memorama de animalitos sin animalitos"</h2>
             <ul class="item-left lista">
                 <p class="lista__parrafo">Tecnologías usadas</p>
                 <li class="lista__item"><span class="lista__icono">
@@ -238,13 +249,13 @@
                     <img src="imagenes/javascript.png" alt="JAVASCRIPT"></span>JavaScript
                 </li>
                 <div class="cont__btn">
-                    <a class="btn" href="https://jizradesign.github.io/memorama/" target="_blank" rel="noopener"><span class="text__btn">Sitio</span></a>
+                    <a class="btn" href="https://jizradesign.github.io/memorama/" target="_blank" rel="noopener" title="Sitio web"><span class="text__btn">Sitio</span></a>
                 </div>
             </ul>
             <iframe class="item-rotate-right center cont_memorama personalizado"  src="https://jizradesign.github.io/memorama/" frameborder="0"></iframe>
             <p class="article__parrafo">Un memorama sencillo para niños</p>
                 <span class="cont__btn">
-                    <a class="btn" href="https://jizradesign.github.io/memorama/" target="_blank" rel="noopener"><span class="text__btn">Sitio</span></a>
+                    <a class="btn" href="https://jizradesign.github.io/memorama/" target="_blank" rel="noopener"><span class="text__btn" title="Sitio web">Sitio</span></a>
                 </span>
             </p>
         </article>
@@ -252,7 +263,8 @@
 
     <section class="colecciones postales" id="postales">
         <h2 class="article__title">Sección de postales y Souvenirs</h2>
-        <ul class="lista">
+        <p class="article__parrafo">Algo de juego con animaciones en css.</p>
+        <ul class="lista alone">
             <p class="lista__parrafo">Tecnologías usadas</p>
             <li class="lista__item"><span class="lista__icono">
                 <img src="imagenes/html.png" alt="HTML 5"></span>HTML 5
@@ -267,7 +279,7 @@
         <div class="cont__colecciones" id="carrusel-postales">
             <article class="article postal__item" id="postal-love">
                 <h1 class="article__title">Postal de san valentin</h1>
-                <iframe class="center cont__postal"  src="https://jizradesign.github.io/cards/te_amo.html" frameborder="0"></iframe>
+                <iframe class="cont__postal"  src="https://jizradesign.github.io/cards/te_amo.html" frameborder="0"></iframe>
                 <p class="article__parrafo">Postal de san valentin</p>
                     <span class="cont__btn">
                         <a class="btn" href="https://jizradesign.github.io/cards/te_amo.html" target="_blank" rel="noopener"><span class="text__btn">Sitio</span></a>
@@ -276,7 +288,7 @@
             </article>
             <article class="article postal__item" id="postal-dias">
                 <h1 class="article__title">Postal de buenos días</h1>
-                <iframe class="center cont__postal"  src="https://jizradesign.github.io/cards/buenos_dias.html" frameborder="0"></iframe>
+                <iframe class="cont__postal"  src="https://jizradesign.github.io/cards/buenos_dias.html" frameborder="0"></iframe>
                 <p class="article__parrafo">Postal de buenos días</p>
                     <span class="cont__btn">
                         <a class="btn" href="https://jizradesign.github.io/cards/buenos_dias.html" target="_blank" rel="noopener"><span class="text__btn">Sitio</span></a>
@@ -285,7 +297,7 @@
             </article>
             <article class="article postal__item" id="postal-noches">
                 <h1 class="article__title">Postal de buenas noches</h1>
-                <iframe class="center cont__postal"  src="https://jizradesign.github.io/cards/buenas_noches.html" frameborder="0"></iframe>
+                <iframe class="cont__postal"  src="https://jizradesign.github.io/cards/buenas_noches.html" frameborder="0"></iframe>
                 <p class="article__parrafo">Postal de buenas noches</p>
                     <span class="cont__btn">
                         <a class="btn" href="https://jizradesign.github.io/cards/buenas_noches.html" target="_blank" rel="noopener"><span class="text__btn">Sitio</span></a>
@@ -294,7 +306,7 @@
             </article>
             <article class="article postal__item" id="postal-noches">
                 <h1 class="article__title">Postal dinámica (pc)</h1>
-                <iframe class="center cont__postal"  src="https://jizradesign.github.io/cards/btn-run/" frameborder="0"></iframe>
+                <iframe class="cont__postal"  src="https://jizradesign.github.io/cards/btn-run/" frameborder="0"></iframe>
                 <p class="article__parrafo">Postal dinámica (pc) basado en un meme el boton que corre no quiere ser presionado, solo funciona en pc porque corre cuando el puntero del mouse se pone sobre de el</p>
                     <span class="cont__btn">
                         <a class="btn" href="https://jizradesign.github.io/cards/btn-run/" target="_blank" rel="noopener"><span class="text__btn">Sitio</span></a>
@@ -353,7 +365,7 @@
     <script src="js/estados.js"></script>
     <script src="js/contacto.js"></script>
     <script src="https://jizradesign.github.io/releases/lightBox.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="https://jizradesign.github.io/releases/jd-carrusel.min.js"></script>
     <script src="https://jizradesign.github.io/releases/social-bar.js"></script>
 </body>
 </html>
