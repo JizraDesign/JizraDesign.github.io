@@ -418,15 +418,15 @@ footer {
 			top: 150%;
 		}
 	}
-	#nube_1 {
+	#nube_1.animate {
 		transform: scale(1.5);
 		animation: nube_1 60s linear infinite;
 	}
-	#nube_2 {
+	#nube_2.animate {
 		transform: scale(1.1);
 		animation: nube_2 60s linear infinite;
 	}
-	#nube_3 {
+	#nube_3.animate {
 		transform: scale(1.2);
 		animation: nube_3 60s linear infinite;
 	}
