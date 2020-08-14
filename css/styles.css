@@ -800,7 +800,8 @@ input[type="submit"]{
     margin-bottom: 10px;
 }
 .postal__item .article__parrafo{
-    margin: 0 20px;
+    width: 100%;
+    margin: 0;
 }
 .cont__postal{
     width: 100%;
