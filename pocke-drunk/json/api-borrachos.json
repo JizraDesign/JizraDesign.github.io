@@ -1,0 +1,158 @@
+{
+    "count": 7,
+    "borrachos": [
+        {
+            "firstName": "Xolo",
+            "lastName": "Miller",
+            "birthday": "",
+            "age": 36,
+            "picture": "",
+            "address": {
+                "streetAddress": "21 2nd Street",
+                "city": "New York",
+                "state": "NY"
+            },
+            "phoneNumbers": [
+                {
+                    "type": "home",
+                    "number": "212 555-1234"
+                },
+                {
+                    "type": "fax",
+                    "number": "646 555-4567"
+                }
+            ]
+        },
+        {
+            "firstName": "Felix",
+            "lastName": "gatito",
+            "birthday": "",
+            "picture": "",
+            "address": {
+                "streetAddress": "Friki Plaza",
+                "city": "Friki land",
+                "state": "Friki"
+            },
+            "phoneNumbers": [
+                {
+                    "type": "home",
+                    "number": "666 555-1234"
+                },
+                {
+                    "type": "fax",
+                    "number": "666 555-4567"
+                }
+            ]
+        },
+        {
+            "firstName": "Calcifer",
+            "lastName": "De Lioncour",
+            "birthday": "13-10-1984",
+            "age": 25,
+            "picture": "calcifer.jpg",
+            "address": {
+                "streetAddress": "Noveno Circulo",
+                "city": "Iframundo",
+                "state": "IF"
+            },
+            "phoneNumbers": [
+                {
+                    "type": "home",
+                    "number": "666 555-1234"
+                },
+                {
+                    "type": "fax",
+                    "number": "666 555-4567"
+                }
+            ]
+        },
+        {
+            "firstName": "Homero",
+            "lastName": "Simpson",
+            "birthday": "",
+            "age": 39,
+            "picture": "",
+            "address": {
+                "streetAddress": "Avenida Siempreviva 742",
+                "city": "Springfield",
+                "state": "SP"
+            },
+            "phoneNumbers": [
+                {
+                    "type": "home",
+                    "number": "666 555-1234"
+                },
+                {
+                    "type": "fax",
+                    "number": "666 555-4567"
+                }
+            ]
+        },
+        {
+            "firstName": "Barney",
+            "lastName": "Gumble",
+            "birthday": "",
+            "age": 40,
+            "picture": "",
+            "address": {
+                "streetAddress": "",
+                "city": "",
+                "state": ""
+            },
+            "phoneNumbers": [
+                {
+                    "type": "home",
+                    "number": "666 555-1234"
+                },
+                {
+                    "type": "fax",
+                    "number": "666 555-4567"
+                }
+            ]
+        },
+        {
+            "firstName": "Jaime Duende",
+            "lastName": "Gongora y Gongora",
+            "birthday": "",
+            "age": 60,
+            "picture": "",
+            "address": {
+                "streetAddress": "",
+                "city": "",
+                "state": ""
+            },
+            "phoneNumbers": [
+                {
+                    "type": "home",
+                    "number": "666 555-1234"
+                },
+                {
+                    "type": "fax",
+                    "number": "666 555-4567"
+                }
+            ]
+        },
+        {
+            "firstName": "Bender",
+            "lastName": "",
+            "birthday": "",
+            "age": 10,
+            "picture": "",
+            "address": {
+                "streetAddress": "a",
+                "city": "",
+                "state": ""
+            },
+            "phoneNumbers": [
+                {
+                    "type": "",
+                    "number": "666 555-1234"
+                },
+                {
+                    "type": "",
+                    "number": "666 555-4567"
+                }
+            ]
+        }
+    ]
+}
