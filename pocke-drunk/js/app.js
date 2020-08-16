@@ -36,11 +36,7 @@ search.addEventListener('submit', e=> {
     }, 1500);
 });
 function dataDrunk(drunk){
-    let datos = new FormData();
-    fetch('json/api-borrachos.json', {
-        method: 'post',
-        body: datos
-    })
+    fetch('json/api-borrachos.json')
     .then(res => res.json())
     .then(data => {
         info.innerHTML = "";
