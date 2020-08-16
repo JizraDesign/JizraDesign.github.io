@@ -4,9 +4,8 @@
         {
             "firstName": "Xolo",
             "lastName": "Miller",
-            "birthday": "",
-            "age": 36,
-            "picture": "",
+            "birthday": "20-04-1984",
+            "picture": "xolo.jpg",
             "address": {
                 "streetAddress": "21 2nd Street",
                 "city": "New York",
@@ -27,7 +26,7 @@
             "firstName": "Felix",
             "lastName": "gatito",
             "birthday": "",
-            "picture": "",
+            "picture": "felix.jpg",
             "address": {
                 "streetAddress": "Friki Plaza",
                 "city": "Friki land",
@@ -48,7 +47,6 @@
             "firstName": "Calcifer",
             "lastName": "De Lioncour",
             "birthday": "13-10-1984",
-            "age": 25,
             "picture": "calcifer.jpg",
             "address": {
                 "streetAddress": "Noveno Circulo",
@@ -69,9 +67,8 @@
         {
             "firstName": "Homero",
             "lastName": "Simpson",
-            "birthday": "",
-            "age": 39,
-            "picture": "",
+            "birthday": "12-05-1956",
+            "picture": "homero.jpg",
             "address": {
                 "streetAddress": "Avenida Siempreviva 742",
                 "city": "Springfield",
@@ -91,9 +88,8 @@
         {
             "firstName": "Barney",
             "lastName": "Gumble",
-            "birthday": "",
-            "age": 40,
-            "picture": "",
+            "birthday": "01-10-1980",
+            "picture": "barney.jpg",
             "address": {
                 "streetAddress": "",
                 "city": "",
@@ -113,9 +109,8 @@
         {
             "firstName": "Jaime Duende",
             "lastName": "Gongora y Gongora",
-            "birthday": "",
-            "age": 60,
-            "picture": "",
+            "birthday": "01-10-1960",
+            "picture": "jaime.jpeg",
             "address": {
                 "streetAddress": "",
                 "city": "",
@@ -135,9 +130,8 @@
         {
             "firstName": "Bender",
             "lastName": "",
-            "birthday": "",
-            "age": 10,
-            "picture": "",
+            "birthday": "01-10-2010",
+            "picture": "bender.jpg",
             "address": {
                 "streetAddress": "a",
                 "city": "",

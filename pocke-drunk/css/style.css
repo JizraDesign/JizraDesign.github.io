@@ -69,9 +69,18 @@ body{
     padding: 2%;
     overflow-y: auto;
 }
+.data__info{
+    flex-wrap: wrap;
+}
+.data__info span{
+    width: 100%;
+}
+.cont__img{
+    width: 100%;
+    height: 40%;
+}
 .foto-perfil{
     width: 100%;
-    height: 180px;
     object-fit: contain;
 }
 /* >>>>> -->>>>> ----- cuerpo ----- <<<<<-- <<<<< */
@@ -153,12 +162,6 @@ body{
         box-shadow: 0 0em 0 0px rgb(1, 1, 82);
     }
 }
-.data__info{
-    flex-wrap: wrap;
-}
-.data__info span{
-    width: 100%;
-}
 .btn__erase{
     width: 2.916em;
     height: 2.916em;
@@ -185,6 +188,9 @@ input[type="submit"]{
     }
     .pantalla{
         font-size: 0.625em;
+    }
+    .btn__ir{
+        font-size: 0.80em;
     }
     .btn__erase{
         font-size: 0.75em;

@@ -70,7 +70,9 @@ function dataDrunk(drunk){
                 calle.textContent = `Calle: ${borracho.address.streetAddress}`;
             let foto = info.appendChild(document.createElement('span'));
                 foto.textContent = `Foto :`;
-            let img = info.appendChild(document.createElement('img'));
+            let contImg = info.appendChild(document.createElement('div'));
+                contImg.setAttribute('class', 'cont__img');
+            let img = contImg.appendChild(document.createElement('img'));
                 img.setAttribute('class', 'foto-perfil');
             fetch('profiles/'+borracho.picture)
             .then(res => res.blob())
