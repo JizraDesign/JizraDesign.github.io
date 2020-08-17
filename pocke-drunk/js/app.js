@@ -4,12 +4,13 @@ const search = document.querySelector('#search'),
     btnErase = document.querySelector('#btn__erase'),
     led = document.querySelectorAll('.led');
 let busqueda;
+let fecha = new Date();
+let year = fecha.getFullYear();
 nombre.addEventListener('keyup', ()=> {
     busqueda = nombre.value = nombre.value.toLowerCase().replace(/\b[a-z]/g, function(letter){
         return letter.toUpperCase();
     });
 });
-
 btnErase.addEventListener('click', ()=> {
     info.textContent = "";
     search.reset();
@@ -30,61 +31,80 @@ search.addEventListener('submit', e=> {
             led[i].classList.remove('active');
             led[i].style = "";
         }, 2000);
-    }
+    };
     setTimeout(() => {
         dataDrunk(busqueda);
     }, 1500);
 });
 function dataDrunk(drunk){
-    fetch('json/api-borrachos.json')
+fetch('json/api-borrachos.json')
     .then(res => res.json())
     .then(data => {
         info.innerHTML = "";
+        let $buscar = drunk,
+            busqueda = data.borrachos;
+
         let fecha = new Date();
         let year = fecha.getFullYear();
 
-        let buscar = data.borrachos.filter(borracho=>borracho.firstName === drunk);
-        if(buscar.length <= 0){
-            info.textContent = "Estas pedo, no se a quien buscas";
+        for(let i = 0; i < busqueda.length; i++){
+            if(busqueda[i].apodos.filter(borracho=>borracho.apodo === $buscar).length >= 1){
+                makeData(busqueda[i],year);
+            };
         };
-        for(let borracho of buscar){
-            let apellido = info.appendChild(document.createElement('span'));
-                apellido.textContent = `Otro nombre : ${borracho.lastName}`;
-            let cumpleaños = info.appendChild(document.createElement('span'));
-                cumpleaños.textContent = `Cumpleaños : ${borracho.birthday}`;
-            let birthday = borracho.birthday = borracho.birthday.replace(/^(\d+)\-(\d+)\-/g, "");
-            let age = year - birthday;
-            let edad = info.appendChild(document.createElement('span'));
-                edad.textContent = `Edad: ${age} años`;
-            let telHome = info.appendChild(document.createElement('span'));
-                telHome.textContent = `Teléfono home : ${borracho.phoneNumbers[0].number}`;
-            let telFax = info.appendChild(document.createElement('span'));
-                telFax.textContent = `Teléfono fax: ${borracho.phoneNumbers[1].number}`;
-            let direccion = info.appendChild(document.createElement('span'));
-                direccion.textContent = "Direccion :";
-            let state = info.appendChild(document.createElement('span'));
-                state.textContent = `Estado: ${borracho.address.state}`;
-            let city = info.appendChild(document.createElement('span'));
-                city.textContent = `Ciudad: ${borracho.address.city}`;
-            let calle = info.appendChild(document.createElement('span'));
-                calle.textContent = `Calle: ${borracho.address.streetAddress}`;
-            let foto = info.appendChild(document.createElement('span'));
-                foto.textContent = `Foto :`;
-            let contImg = info.appendChild(document.createElement('div'));
-                contImg.setAttribute('class', 'cont__img');
-            let img = contImg.appendChild(document.createElement('img'));
-                img.setAttribute('class', 'foto-perfil');
-            fetch('profiles/'+borracho.picture)
-            .then(res => res.blob())
-            .then(data => {
-                let imagen = URL.createObjectURL(data);
-                img.setAttribute('src', imagen);
-            });
-                
-        }; 
     })
     .catch(error => {
         console.log('Error : ');
         console.log(error);
     });
+};
+function makeData(borracho,year){
+    let firstname = info.appendChild(document.createElement('span'));
+        firstname.textContent = `Nombre principal : ${borracho.firstName}`;
+    let apellido = info.appendChild(document.createElement('span'));
+        apellido.textContent = 'Nombres conocidos : ';
+        for(let i = 0; i < borracho.apodos.length; i++){
+            apellido.innerHTML += `"${borracho.apodos[i].apodo}" `;
+        };
+    let cumpleaños = info.appendChild(document.createElement('span'));
+        cumpleaños.textContent = `Cumpleaños : ${borracho.birthday}`;
+    let birthday = borracho.birthday = borracho.birthday.replace(/^(\d+)\-(\d+)\-/g, "");
+    let age = year - birthday;
+    let edad = info.appendChild(document.createElement('span'));
+        edad.textContent = `Edad: ${age} años`;
+    let telHome = info.appendChild(document.createElement('span'));
+        telHome.textContent = `Teléfono home : ${borracho.phoneNumbers[0].number}`;
+    let telFax = info.appendChild(document.createElement('span'));
+        telFax.textContent = `Teléfono fax: ${borracho.phoneNumbers[1].number}`;
+    let direccion = info.appendChild(document.createElement('span'));
+        direccion.textContent = "Direccion :";
+    let state = info.appendChild(document.createElement('span'));
+        state.textContent = `Estado: ${borracho.address.state}`;
+    let city = info.appendChild(document.createElement('span'));
+        city.textContent = `Ciudad: ${borracho.address.city}`;
+    let calle = info.appendChild(document.createElement('span'));
+        calle.textContent = `Calle: ${borracho.address.streetAddress}`;
+    let foto = info.appendChild(document.createElement('span'));
+        foto.textContent = `Foto :`;
+    let contImg = info.appendChild(document.createElement('div'));
+        contImg.setAttribute('class', 'cont__img');
+    let img = contImg.appendChild(document.createElement('img'));
+        img.setAttribute('class', 'foto-perfil');
+    fetch('profiles/'+borracho.picture)
+    .then(res => res.blob())
+    .then(data => {
+        let imagen = URL.createObjectURL(data);
+        img.setAttribute('src', imagen);
+    });
+    bajar();
+};
+function bajar(){
+    let pantalla = document.querySelector('.pantalla');
+    let altura = pantalla.scrollHeight;
+    setTimeout(() => {
+        pantalla.scrollTo({
+            top: altura,
+            behavior: 'smooth'
+        });
+    }, 4000);
 };

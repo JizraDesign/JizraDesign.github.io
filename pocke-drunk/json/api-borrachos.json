@@ -2,8 +2,15 @@
     "count": 7,
     "borrachos": [
         {
+            "apodos": [
+                {"apodo": "Xolo"},
+                {"apodo": "Miller"},
+                {"apodo": "Patata"},
+                {"apodo": "Licenciado"},
+                {"apodo": "Licenciado Cantinas"}
+            ],
             "firstName": "Xolo",
-            "lastName": "Miller",
+            "lastName": "",
             "birthday": "20-04-1984",
             "picture": "xolo.jpg",
             "address": {
@@ -23,8 +30,13 @@
             ]
         },
         {
+            "apodos": [
+                {"apodo": "Felix"},
+                {"apodo": "Gatito"},
+                {"apodo": "Licenciado"}
+            ],
             "firstName": "Felix",
-            "lastName": "gatito",
+            "lastName": "",
             "birthday": "",
             "picture": "felix.jpg",
             "address": {
@@ -44,6 +56,13 @@
             ]
         },
         {
+            "apodos": [
+                {"apodo": "Calcifer"},
+                {"apodo": "De Lioncour"},
+                {"apodo": "More"},
+                {"apodo": "Patata"},
+                {"apodo": "Licenciado"}
+            ],
             "firstName": "Calcifer",
             "lastName": "De Lioncour",
             "birthday": "13-10-1984",
@@ -65,6 +84,11 @@
             ]
         },
         {
+            "apodos": [
+                {"apodo": "Homero"},
+                {"apodo": "Simpson"},
+                {"apodo": "Homero Simpson"}
+            ],
             "firstName": "Homero",
             "lastName": "Simpson",
             "birthday": "12-05-1956",
@@ -86,6 +110,11 @@
             ]
         },
         {
+            "apodos": [
+                {"apodo": "Barney"},
+                {"apodo": "Gumbler"},
+                {"apodo": "Barney Gumble"}
+            ],
             "firstName": "Barney",
             "lastName": "Gumble",
             "birthday": "01-10-1980",
@@ -107,6 +136,11 @@
             ]
         },
         {
+            "apodos": [
+                {"apodo": "Jaime"},
+                {"apodo": "Duende"},
+                {"apodo": "Jaime duende"}
+            ],
             "firstName": "Jaime Duende",
             "lastName": "Gongora y Gongora",
             "birthday": "01-10-1960",
@@ -128,6 +162,9 @@
             ]
         },
         {
+            "apodos": [
+                {"apodo": "Bender"}
+            ],
             "firstName": "Bender",
             "lastName": "",
             "birthday": "01-10-2010",
