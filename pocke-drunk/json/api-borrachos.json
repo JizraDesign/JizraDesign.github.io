@@ -27,7 +27,8 @@
                     "type": "fax",
                     "number": "646 555-4567"
                 }
-            ]
+            ],
+            "perfil" : "public"
         },
         {
             "apodos": [
@@ -53,7 +54,8 @@
                     "type": "fax",
                     "number": "666 555-4567"
                 }
-            ]
+            ],
+            "perfil" : "public"
         },
         {
             "apodos": [
@@ -81,7 +83,8 @@
                     "type": "fax",
                     "number": "666 555-4567"
                 }
-            ]
+            ],
+            "perfil" : "public"
         },
         {
             "apodos": [
@@ -107,7 +110,8 @@
                     "type": "fax",
                     "number": "666 555-4567"
                 }
-            ]
+            ],
+            "perfil" : "public"
         },
         {
             "apodos": [
@@ -133,7 +137,8 @@
                     "type": "fax",
                     "number": "666 555-4567"
                 }
-            ]
+            ],
+            "perfil" : "public"
         },
         {
             "apodos": [
@@ -159,7 +164,8 @@
                     "type": "fax",
                     "number": "666 555-4567"
                 }
-            ]
+            ],
+            "perfil" : "public"
         },
         {
             "apodos": [
@@ -183,7 +189,88 @@
                     "type": "",
                     "number": "666 555-4567"
                 }
-            ]
+            ],
+            "perfil" : "public"
+        },
+        {
+            "apodos": [
+                {"apodo": "Ixchel"},
+                {"apodo": "Licenciado"}
+            ],
+            "firstName": "Ixchel",
+            "lastName": "",
+            "birthday": "01-10-2010",
+            "picture": "itzel.jpg",
+            "address": {
+                "streetAddress": "a",
+                "city": "",
+                "state": ""
+            },
+            "phoneNumbers": [
+                {
+                    "type": "",
+                    "number": "666 555-1234"
+                },
+                {
+                    "type": "",
+                    "number": "666 555-4567"
+                }
+            ],
+            "perfil" : "public"
+        },
+        {
+            "apodos": [
+                {"apodo": "Cesar"}
+            ],
+            "firstName": "Cesar",
+            "lastName": "",
+            "birthday": "01-10-2010",
+            "picture": "",
+            "address": {
+                "streetAddress": "a",
+                "city": "",
+                "state": ""
+            },
+            "phoneNumbers": [
+                {
+                    "type": "",
+                    "number": "666 555-1234"
+                },
+                {
+                    "type": "",
+                    "number": "666 555-4567"
+                }
+            ],
+            "perfil" : "public"
+        },
+        {
+            "apodos": [
+                {"apodo": "Dy"},
+                {"apodo": "Diana"},
+                {"apodo": "Yess"},
+                {"apodo": "Amatista"},
+                {"apodo": "Montero"}
+            ],
+            "firstName": "Dy",
+            "lastName": "",
+            "birthday": "10-04-1984",
+            "picture": "dy.jpg",
+            "address": {
+                "streetAddress": "-->><<--",
+                "city": "Texcoco",
+                "state": "Texcoco"
+            },
+            "phoneNumbers": [
+                {
+                    "type": "",
+                    "number": "666 555-1234"
+                },
+                {
+                    "type": "",
+                    "number": "666 555-4567"
+                }
+            ],
+            "perfil" : "private"
         }
     ]
 }

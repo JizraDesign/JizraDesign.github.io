@@ -3,6 +3,7 @@ const search = document.querySelector('#search'),
     info = document.querySelector('.data__info'),
     btnErase = document.querySelector('#btn__erase'),
     led = document.querySelectorAll('.led');
+let superUser = false;
 let busqueda;
 let fecha = new Date();
 let year = fecha.getFullYear();
@@ -17,11 +18,21 @@ btnErase.addEventListener('click', ()=> {
 });
 search.addEventListener('submit', e=> {
     e.preventDefault();
+    if(nombre.value === "Superuser 131084"){
+        info.textContent = 'Bienvenido!! Amo!';
+        superUser = true;
+        return
+    }
+    if(nombre.value === "Superuser Off"){
+        info.textContent = 'Hasta luego!! Amo!';
+        superUser = false;
+        return
+    }
     if(nombre.value === ""){
-        info.textContent = 'Ya estas pedo, se te olvido ingresar datos';
+        info.textContent = 'Ya estas pedo, se te olvido ingresar datos wey!!';
         return false;
     };
-    info.innerHTML = 'buscando<span class="punto">.</span><span class="punto">.</span><span class="punto">.</span>';
+    info.innerHTML = 'Buscando<span class="punto">.</span><span class="punto">.</span><span class="punto">.</span>';
     for(let i = 0; i < led.length; i++){
         led[i].style = `animation: luz 1s linear infinite`;
         setTimeout(() => {
@@ -42,16 +53,64 @@ fetch('json/api-borrachos.json')
     .then(data => {
         info.innerHTML = "";
         let $buscar = drunk,
-            busqueda = data.borrachos;
+            busqueda = data.borrachos,
+        datos = [];
 
         let fecha = new Date();
         let year = fecha.getFullYear();
 
-        for(let i = 0; i < busqueda.length; i++){
-            if(busqueda[i].apodos.filter(borracho=>borracho.apodo === $buscar).length >= 1){
-                makeData(busqueda[i],year);
+        if(superUser === true){
+            for(let i = 0; i < busqueda.length; i++){
+                if(busqueda[i].apodos.filter(borracho=>borracho.apodo === $buscar).length >= 1){;
+                    datos.push(busqueda[i]);
+                };  
+            };       
+        }else{
+            for(let i = 0; i < busqueda.length; i++){
+                if(busqueda[i].apodos.filter(borracho=>borracho.apodo === $buscar).length >= 1){
+                    if(busqueda[i].perfil === "public"){
+                        datos.push(busqueda[i]);
+                    }else{
+                        datos.push({
+                            "apodos": [
+                                {"apodo": "No tienes acceso a este pinche perfil!!!"}
+                            ],
+                            "firstName": $buscar,
+                            "lastName": "",
+                            "birthday": "00-0-"+year,
+                            "picture": "dedo.jpg",
+                            "address": {
+                                "streetAddress": "",
+                                "city": "",
+                                "state": ""
+                            },
+                            "phoneNumbers": [
+                                {
+                                    "type": "",
+                                    "number": ""
+                                },
+                                {
+                                    "type": "",
+                                    "number": ""
+                                }
+                            ],
+                            "perfil" : ""
+                        });
+                    };
+                };
             };
         };
+        if(datos.length >= 1){
+            let encontrados = datos.length;
+            let items = info.appendChild(document.createElement('span'));
+                items.textContent = `Encontrados : ${encontrados}`;
+            for(arreglo of datos){
+                makeData(arreglo,year);
+            }
+        }else{
+            info.textContent = 'Ya estas pedo, ese ti@ no existe, deja de chupar ca!!!';
+        };
+        
     })
     .catch(error => {
         console.log('Error : ');
@@ -77,7 +136,7 @@ function makeData(borracho,year){
     let telFax = info.appendChild(document.createElement('span'));
         telFax.textContent = `Teléfono fax: ${borracho.phoneNumbers[1].number}`;
     let direccion = info.appendChild(document.createElement('span'));
-        direccion.textContent = "Direccion :";
+        direccion.textContent = "Dirección :";
     let state = info.appendChild(document.createElement('span'));
         state.textContent = `Estado: ${borracho.address.state}`;
     let city = info.appendChild(document.createElement('span'));
