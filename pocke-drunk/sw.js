@@ -35,8 +35,8 @@ self.addEventListener('install', e => {
                 'index.html',
                 'css/style.css',
                 'js/app.js',
-                'json/api-borrachos.json'
-
+                'json/api-borrachos.json',
+                'profiles/no-img.jpg'
             ]);
 
         });
@@ -54,13 +54,8 @@ self.addEventListener('fetch', e => {
         .then( res => {
             if( res ) return res;
 
-            //no existe archivo
-            //ir a web
-            console.log( 'No existe', e.request.url );
-
             return fetch( e.request ).then( newResp => {
 
-                //agragar archivo faltante
                 caches.open( CACHE_DYNAMIC_NAME )
                     .then( cache => {
                         cache.put( e.request, newResp );
@@ -72,6 +67,16 @@ self.addEventListener('fetch', e => {
             });
             
         })
+        .catch( err => {
+            
+            // if(e.request.headers.get('accept').includes('text/html')){
+            //     return caches.match('pages/offline.html');
+            // }
+            if( /\.(png|jpg)$/i.test( e.request.url) ){
+                return  caches.match('profiles/no-img.jpg');
+            }
+
+        });
 
 
     e.respondWith(respuesta)
