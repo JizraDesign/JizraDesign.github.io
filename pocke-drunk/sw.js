@@ -1,4 +1,4 @@
-const CACHE_STATIC_NAME = 'static-v1.2',
+const CACHE_STATIC_NAME = 'static-v1.3',
     CACHE_DYNAMIC_NAME = 'dynamic-v1',
     CACHE_INMUTABLE_NAME = 'inmutable-v1',
     CACHE_DYNAMIC_LIMIT = 50;
@@ -31,6 +31,7 @@ self.addEventListener('install', e => {
                 'index.html',
                 'css/style.css',
                 'js/app.js',
+                'js/pocke-drunk.js',
                 'json/api-borrachos.json',
                 'media/img/no-img.jpg',
                 'media/video/video-on.mp4'
