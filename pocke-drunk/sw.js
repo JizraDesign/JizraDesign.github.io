@@ -1,8 +1,7 @@
-const CACHE_STATIC_NAME = 'static-v1.3',
+const CACHE_STATIC_NAME = 'static-v1.1',
     CACHE_DYNAMIC_NAME = 'dynamic-v1',
     CACHE_INMUTABLE_NAME = 'inmutable-v1',
     CACHE_DYNAMIC_LIMIT = 50;
-
 
 function limpiarCache( cacheName, numeroItems ){
 
@@ -33,6 +32,10 @@ self.addEventListener('install', e => {
                 'js/app.js',
                 'js/pocke-drunk.js',
                 'json/api-borrachos.json',
+                'media/img/cheches.jpg',
+                'media/img/tacos.jpg',
+                'media/img/tortas.jpg',
+                'media/img/vtac.jpg',
                 'media/img/no-img.jpg',
                 'media/video/video-on.mp4'
             ]);

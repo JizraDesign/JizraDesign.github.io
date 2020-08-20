@@ -69,7 +69,6 @@ body{
 .pantalla{
     position: relative;
 
-    display: block;
     width: 95%;
     height: 60%;
     margin: 0 auto;
@@ -85,7 +84,7 @@ body{
     box-shadow: 0.3125em 0.3125em 5px 0 rgba(0, 0, 0, 0.5);
 }
 .pantalla.on{
-    background: url(../media/img/tacOs.jpg) #ccc;
+    background: url(../media/img/tacos.jpg) #ccc;
     background-size: cover;
     backdrop-filter: blur(5px);
     box-shadow: 0.3125em 0.3125em 5px 0px rgba(0, 0, 0, 0.5),
@@ -252,26 +251,46 @@ input[type="submit"]{
 /* >>>>> -->>>>> ----- video on ----- <<<<<-- <<<<< */
 
 .video__on{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50% -50%);
     width: 0px;
     height: 0px;
     object-fit: cover;
     border-radius: 50%;
 }
+/* >>>>> -->>>>> ----- despedida ----- <<<<<-- <<<<< */
+.imagen__off{
+    width: 100%;
+    height: 100%;
+    animation: off 0.5s ease 1.5s forwards;
+}
+.imagen__off.off{
+    border-radius: 50%;
+    width: 0px;
+    height: 0px;
+    animation: on 0.5s ease forwards;
+}
+@keyframes off{
+    100%{
+        border-radius: 50%;
+        width: 0px;
+        height: 0px;
+    }
+}
+@keyframes on{
+    100%{
+        border-radius:0%;
+        width: 100%;
+        height: 100%;
+    }
+}
+
 @keyframes openVideo{
     50%{
         border-radius: 50%;
     }
     100%{
-        top: 0.3125em;
-        left: 0.3125em;
-        transform: translate(0% 0%);
-        width: calc(100% - 0.6550em);
-        height: calc(100% - 0.6550em);
-        border-radius: 0%;
+        border-radius:0%;
+        width: 100%;
+        height: 100%;
     }
 }
 

@@ -11,26 +11,63 @@ btnPower.addEventListener('click', () => {
     if(contText.classList.contains('on')){
         pantalla.classList.remove('on');
         contText.classList.remove('on');
-        contText.style.transition = ""
         limpiarPantalla();
+        despedida();
     }else{
         miVideoOn();
         limpiarPantalla();
         document.querySelector('.video__on').style='animation: openVideo 0.5s ease forwards';
-        
         setTimeout(() => {
             document.querySelector('.video__on').remove();
             pantalla.classList.toggle('on');
-            contText.style.transition = 'all 0.3s ease;';
             contText.classList.toggle('on');
         }, 1000);
     }
     
     function miVideoOn(){
-        let videoOn = pantalla.appendChild(document.createElement('video'));
-            videoOn.setAttribute('src', 'media/video/video-on.mp4');
+        const videoOn = pantalla.appendChild(document.createElement('video'));
+            fetch('media/video/video-on.mp4')
+            .then(res => res.blob())
+            .then(data => {
+                let video = URL.createObjectURL(data);
+                videoOn.setAttribute('src', video);
+            });
             videoOn.setAttribute('class', 'video__on');
             videoOn.setAttribute('autoplay',"");
+    }
+    function despedida(){
+        let pantallaOf = pantalla.appendChild(document.createElement('img'));
+            fetch('media/img/cheches.jpg')
+            .then(res => res.blob())
+            .then(data => {
+                let imagen = URL.createObjectURL(data);
+                pantallaOf.setAttribute('src', imagen);
+            });
+                pantallaOf.setAttribute('class', 'imagen__off');
+            setTimeout(() => {
+                pantallaOf.remove();
+                
+
+                pantallaOf = pantalla.appendChild(document.createElement('img'));
+                fetch('media/img/tortas.jpg')
+                .then(res => res.blob())
+                .then(data => {
+                    let imagen = URL.createObjectURL(data);
+                    pantallaOf.setAttribute('src', imagen);
+                });
+                    pantallaOf.setAttribute('class', 'imagen__off off');
+                setTimeout(() => {
+
+                    pantallaOf.setAttribute('class', 'imagen__off');
+                    setTimeout(() => {
+                        pantallaOf.remove();
+                    }, 2000);
+                    
+                }, 500);
+
+
+
+            }, 2000);
     }
 })
 
@@ -61,6 +98,9 @@ search.addEventListener('submit', e=> {
     }
     if(nombre.value === ""){
         info.textContent = 'Ya estas pedo, se te olvido ingresar datos wey!!';
+        if(pantalla.classList.contains('on')){
+            fail();
+        };
         return false;
     };
     if(superUser === true && nombre.value === "Limpiar Cache"){
@@ -147,6 +187,7 @@ fetch('json/api-borrachos.json')
             }
         }else{
             info.textContent = 'Ya estas pedo, ese ti@ no existe, deja de chupar ca!!!';
+            fail();
         };
         
     })
@@ -208,3 +249,16 @@ function limpiarPantalla(){
     info.textContent = "";
     search.reset();
 };
+function fail(){
+    let pantallaOf = pantalla.appendChild(document.createElement('img'));
+    fetch('media/img/vtac.jpg')
+    .then(res => res.blob())
+    .then(data => {
+        let imagen = URL.createObjectURL(data);
+        pantallaOf.setAttribute('src', imagen);
+    });
+    pantallaOf.setAttribute('class', 'imagen__off');
+    setTimeout(() => {
+        pantallaOf.remove();
+    }, 2000);
+}
