@@ -1,4 +1,4 @@
-const CACHE_STATIC_NAME = 'static-v1',
+const CACHE_STATIC_NAME = 'static-v1.2',
     CACHE_DYNAMIC_NAME = 'dynamic-v1',
     CACHE_INMUTABLE_NAME = 'inmutable-v1',
     CACHE_DYNAMIC_LIMIT = 50;
@@ -13,16 +13,12 @@ function limpiarCache( cacheName, numeroItems ){
             return cache.keys()
                 .then( keys => {
                     // console.log(keys);
-
                     if( keys.length > numeroItems){
                         cache.delete( keys[0] )
                             .then( limpiarCache( cacheName, numeroItems ) );
                     };
-
                 });
-
         });
-
 };
 
 
@@ -36,14 +32,38 @@ self.addEventListener('install', e => {
                 'css/style.css',
                 'js/app.js',
                 'json/api-borrachos.json',
-                'profiles/no-img.jpg'
+                'media/img/no-img.jpg',
+                'media/video/video-on.mp4'
             ]);
 
         });
 
 
-    e.waitUntil( cacheProm );
+        const cacheInmutable = caches.open( CACHE_INMUTABLE_NAME )
+        .then( cache => {
 
+            return cache.addAll([
+                'https://kit.fontawesome.com/1f8614daef.js'
+
+            ]);
+
+        });
+
+    e.waitUntil( Promise.all([cacheProm, cacheInmutable]) );
+
+});
+
+self.addEventListener('activate', e => {
+
+    const respuesta = caches.keys().then( keys => {
+        keys.forEach(key => {
+            if( key !== CACHE_STATIC_NAME && key.includes('static')){
+                return caches.delete(key);
+            };
+        });
+    });
+
+    e.waitUntil(respuesta);
 });
 
 self.addEventListener('fetch', e => {
@@ -73,7 +93,7 @@ self.addEventListener('fetch', e => {
             //     return caches.match('pages/offline.html');
             // }
             if( /\.(png|jpg)$/i.test( e.request.url) ){
-                return  caches.match('profiles/no-img.jpg');
+                return  caches.match('media/img/no-img.jpg');
             }
 
         });

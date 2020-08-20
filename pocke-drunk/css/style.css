@@ -19,7 +19,7 @@ body{
     background: var(--fondo);
     width: 100%;
     height: 100vh;
-    font-style: 16px;
+    font-size: 16px;
 }
 .cont__ppl{
     width: 100%;
@@ -36,40 +36,77 @@ body{
     min-height: 500px;
     background: red;
     border-radius: 0.9375em;
-    border-bottom: 0.80em solid rgb(97, 2, 2);
-    border-right: 0.41em solid rgb(97, 2, 2);
+    box-shadow: 0.41em 0 0px 0 rgb(97, 2, 2),
+                0.41em 0.80em 0px 0 rgb(97, 2, 2),
+                0 0.80em 0px 0 rgb(97, 2, 2);
+    overflow: hidden;
 }
 /* >>>>> -->>>>> ----- header ----- <<<<<-- <<<<< */
 .header{
     width: 100%;
     height: 15%;
     padding: 5%;
-    text-align: center;
+}
+.title__header{
     font-size: 2em;
     line-height: 0.46875em;
+    text-align: center;
+    width: calc(100% - 0.78125em);
+    height: 100%;
+    padding-left: 0.78125em;
 }
 .design{
     font-size: 0.3em;
+    font-family: cursive;
+    font-style: italic;
+}
+.cont__btn__power{
+    width: 3.125em;
+    height: 100%;
 }
 /* >>>>> -->>>>> ----- pantalla ----- <<<<<-- <<<<< */
 
 .pantalla{
-    position: absolute;
+    position: relative;
 
-    top: 15%;
-    left: 3%;
-    right: 3%;
-
+    display: block;
+    width: 95%;
     height: 60%;
+    margin: 0 auto;
 
     color: var(--textoConsola);
     background: #000;
     border-radius: 0.625em;
     border: solid 0.625em #ccc;
     font-family: consolas;
-    padding: 2%;
-    overflow-y: auto;
+    padding: 0.625em;
+    overflow: hidden;
     cursor: pointer;
+    box-shadow: 0.3125em 0.3125em 5px 0 rgba(0, 0, 0, 0.5);
+}
+.pantalla.on{
+    background: url(../media/img/tacOs.jpg) #ccc;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    box-shadow: 0.3125em 0.3125em 5px 0px rgba(0, 0, 0, 0.5),
+                inset 0.50em 0.50em 0 0 #000,
+                inset -0.50em -0.50em 0 0 #000;
+}
+.cont__text{
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background: rgba(255,255,255, 0);
+}
+.cont__text.on{
+    display: block;
+    animation: fondoApp 0.5s ease 0.2s forwards;
+}
+@keyframes fondoApp{
+    100%{
+        background: rgba(255,255,255,0.9);
+    }
 }
 .data__info{
     flex-wrap: wrap;
@@ -99,22 +136,29 @@ body{
 /* >>>>> -->>>>> ----- luces ----- <<<<<-- <<<<< */
 .luces{
     width: 100%;
+    height: 33.3%;
     padding: 5px 20px;
 }
 [class^="led"]{
     display: inline-block;
-    width: 0.9375em;
-    height: 0.9375em;
     border-radius: 50%;
     background: #000;
     border: solid 0.17em #ccc;
-    box-shadow: inset 2;
+
 }
 .led__gd{
     width: 2.917em;
     height: 2.917em;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.7),
+                inset 2px 2px 5px 1px rgba(255,255,255, 0.7),
+                inset -2px -2px 5px 1px rgba(255,255,255, 0.5);
 }
 .led__ch{
+    width: 0.9375em;
+    height: 0.9375em;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.7),
+                inset 1px 1px 2px 1px rgba(255,255,255, 0.5),
+                inset -2px -2px 5px 1px rgba(255,255,255, 0.2);
     border: solid 0.10em #ccc;
 }
 .led__gd.active{
@@ -141,19 +185,20 @@ body{
 /* >>>>> -->>>>> ----- controles ----- <<<<<-- <<<<< */
 
 .controles{
+    width: 100%;
+    height: 66.6%;
     display: flex;
     justify-content: flex-end;
-
+    align-items: center;
     text-align: right;
+    background: url(../media/img/cheches.jpg);
+    background-position: center;
+    background-size: cover;
 }
 [class^="btn"]{
-    width: 3.50em;
-    height: 3.50em;
     border-radius: 50%;
     color: #fff;
-    background: blue;
-    margin-right: 0.5em;
-    box-shadow: 0 0.25em 0 0px rgb(1, 1, 82);
+    cursor: pointer;
 }
 [class^="btn"] i{
     color: #fff;
@@ -167,15 +212,31 @@ body{
         box-shadow: 0 0em 0 0px rgb(1, 1, 82);
     }
 }
+.btn__power{
+    background: tomato;
+    width: 2.5em;
+    height: 2.5em;
+    background: #fff;
+    box-shadow: 0 0.15625em 0 0px rgb(135, 135, 136);
+}
+.btn__power i{
+    color: #000;
+    font-size: 0.9375em;
+}
+.btn__ir{
+    width: 3.50em;
+    height: 3.50em;
+    background: blue;
+    box-shadow: 0 0.25em 0 0px rgb(1, 1, 82);
+}
 .btn__erase{
     width: 2.916em;
     height: 2.916em;
     background: orange;
     box-shadow: 0 0.25em 0 0px rgb(99, 65, 1);
-    /* margin-right: 15%; */
+    margin-right: 0.5em;
 }
 /* >>>>> -->>>>> ----- formulario ----- <<<<<-- <<<<< */
-
 input{
     background: none;
     border: none;
@@ -188,9 +249,40 @@ input{
 input[type="submit"]{
     display: none;
 }
-@media (min-width:600px){
+/* >>>>> -->>>>> ----- video on ----- <<<<<-- <<<<< */
+
+.video__on{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+    width: 0px;
+    height: 0px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+@keyframes openVideo{
+    50%{
+        border-radius: 50%;
+    }
+    100%{
+        top: 0.3125em;
+        left: 0.3125em;
+        transform: translate(0% 0%);
+        width: calc(100% - 0.6550em);
+        height: calc(100% - 0.6550em);
+        border-radius: 0%;
+    }
+}
+
+
+@media (min-width:480px){
     body{
         font-size: 32px;
+    }
+    .design{
+        display: block;
+        transform: translateY(-01px);
     }
     .pantalla{
         font-size: 0.625em;

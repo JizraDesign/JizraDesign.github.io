@@ -38,7 +38,7 @@
             ],
             "firstName": "Felix",
             "lastName": "",
-            "birthday": "",
+            "birthday": "19-08-1983",
             "picture": "felix.jpg",
             "address": {
                 "streetAddress": "Friki Plaza",

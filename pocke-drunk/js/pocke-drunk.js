@@ -1,20 +1,51 @@
-const search = document.querySelector('#search'),
+const btnPower = document.querySelector('#btn__power'),
+    pantalla = document.querySelector('#pantalla'),
+    contText = document.querySelector('.cont__text'),
+    search = document.querySelector('#search'),
     nombre = document.querySelector('#nombre'),
     info = document.querySelector('.data__info'),
     btnErase = document.querySelector('#btn__erase'),
     led = document.querySelectorAll('.led');
+
+btnPower.addEventListener('click', () => {
+    if(contText.classList.contains('on')){
+        pantalla.classList.remove('on');
+        contText.classList.remove('on');
+        contText.style.transition = ""
+        limpiarPantalla();
+    }else{
+        miVideoOn();
+        limpiarPantalla();
+        document.querySelector('.video__on').style='animation: openVideo 0.5s ease forwards';
+        
+        setTimeout(() => {
+            document.querySelector('.video__on').remove();
+            pantalla.classList.toggle('on');
+            contText.style.transition = 'all 0.3s ease;';
+            contText.classList.toggle('on');
+        }, 1000);
+    }
+    
+    function miVideoOn(){
+        let videoOn = pantalla.appendChild(document.createElement('video'));
+            videoOn.setAttribute('src', 'media/video/video-on.mp4');
+            videoOn.setAttribute('class', 'video__on');
+            videoOn.setAttribute('autoplay',"");
+    }
+})
+
 let superUser = false;
 let busqueda;
 let fecha = new Date();
 let year = fecha.getFullYear();
+
 nombre.addEventListener('keyup', ()=> {
     busqueda = nombre.value = nombre.value.toLowerCase().replace(/\b[a-z]/g, function(letter){
         return letter.toUpperCase();
     });
 });
 btnErase.addEventListener('click', ()=> {
-    info.textContent = "";
-    search.reset();
+    limpiarPantalla();
 });
 search.addEventListener('submit', e=> {
     e.preventDefault();
@@ -155,15 +186,18 @@ function makeData(borracho,year){
         let imagen = URL.createObjectURL(data);
         img.setAttribute('src', imagen);
     });
-    bajar();
+    // bajar();
 };
 function bajar(){
-    let pantalla = document.querySelector('.pantalla');
-    let altura = pantalla.scrollHeight;
+    let altura = contText.scrollHeight;
     setTimeout(() => {
-        pantalla.scrollTo({
+        contText.scrollTo({
             top: altura,
             behavior: 'smooth'
         });
     }, 4000);
+};
+function limpiarPantalla(){
+    info.textContent = "";
+    search.reset();
 };
