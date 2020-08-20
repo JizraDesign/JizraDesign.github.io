@@ -1,4 +1,4 @@
-const CACHE_STATIC_NAME = 'static-v1.1',
+const CACHE_STATIC_NAME = 'static-v1.2',
     CACHE_DYNAMIC_NAME = 'dynamic-v1',
     CACHE_INMUTABLE_NAME = 'inmutable-v1',
     CACHE_DYNAMIC_LIMIT = 50;
