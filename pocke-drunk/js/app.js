@@ -1,6 +1,43 @@
+
 if(navigator.serviceWorker){
     navigator.serviceWorker.register('sw.js');
 };
+
+function limpiarCache(){
+    caches.keys().then( keys => {
+        keys.forEach(key => {
+            if( key.includes('dynamic')){
+                caches.delete(key);
+            }
+        });
+    });
+
+    // caches.open( CACHE_STATIC_NAME )
+    //     .then( cache => {
+
+    //         return cache.addAll([
+    //             'index.html',
+    //             'css/style.css',
+    //             'js/app.js',
+    //             'js/pocke-drunk.js',
+    //             'json/api-borrachos.json',
+    //             'media/img/no-img.jpg',
+    //             'media/video/video-on.mp4'
+    //         ]);
+
+    //     });
+
+
+    // caches.open( CACHE_INMUTABLE_NAME )
+    // .then( cache => {
+
+    //     return cache.addAll([
+    //         'https://kit.fontawesome.com/1f8614daef.js'
+
+    //     ]);
+
+    // });
+}
 
 // if(window.caches){
 

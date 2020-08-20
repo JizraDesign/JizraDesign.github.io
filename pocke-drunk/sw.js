@@ -40,15 +40,15 @@ self.addEventListener('install', e => {
         });
 
 
-        const cacheInmutable = caches.open( CACHE_INMUTABLE_NAME )
-        .then( cache => {
+    const cacheInmutable = caches.open( CACHE_INMUTABLE_NAME )
+    .then( cache => {
 
-            return cache.addAll([
-                'https://kit.fontawesome.com/1f8614daef.js'
+        return cache.addAll([
+            'https://kit.fontawesome.com/1f8614daef.js'
 
-            ]);
+        ]);
 
-        });
+    });
 
     e.waitUntil( Promise.all([cacheProm, cacheInmutable]) );
 

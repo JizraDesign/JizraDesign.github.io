@@ -63,6 +63,13 @@ search.addEventListener('submit', e=> {
         info.textContent = 'Ya estas pedo, se te olvido ingresar datos wey!!';
         return false;
     };
+    if(superUser === true && nombre.value === "Limpiar Cache"){
+        limpiarCache();
+        setTimeout(() => {
+            location.reload();
+        }, 3000);
+        return
+    }
     info.innerHTML = 'Buscando<span class="punto">.</span><span class="punto">.</span><span class="punto">.</span>';
     for(let i = 0; i < led.length; i++){
         led[i].style = `animation: luz 1s linear infinite`;
