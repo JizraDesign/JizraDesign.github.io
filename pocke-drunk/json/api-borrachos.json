@@ -271,6 +271,35 @@
                 }
             ],
             "perfil" : "private"
+        },
+        {
+            "apodos": [
+                {"apodo": "Bac"},
+                {"apodo": "Victor"},
+                {"apodo": "Bacteria"},
+                {"apodo": "Er"},
+                {"apodo": "Er Sinclair"}
+            ],
+            "firstName": "Bac",
+            "lastName": "",
+            "birthday": "10-09-1985",
+            "picture": "bac.jpg",
+            "address": {
+                "streetAddress": "Doctores",
+                "city": "CDMX",
+                "state": "CDM"
+            },
+            "phoneNumbers": [
+                {
+                    "type": "",
+                    "number": "666 555-1234"
+                },
+                {
+                    "type": "",
+                    "number": "666 555-4567"
+                }
+            ],
+            "perfil" : "public"
         }
     ]
 }

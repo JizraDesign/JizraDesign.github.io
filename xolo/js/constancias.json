@@ -1,0 +1,44 @@
+{
+    "constancias":[
+        {
+            "constancia":"Plan de acción para el hogar ante COVID-19",
+            "pdf":"Constancia.pdf",
+            "img":"Constancia.jpg"
+        },
+        {
+            "constancia":"Todo sobre la prevención del COVID-19",
+            "pdf":"Constancia(1).pdf",
+            "img":"Constancia(1).jpg"
+        },
+        {
+            "constancia":"Recomendaciones para un retorno seguro al trabajo ante COVID -19",
+            "pdf":"Constancia(2).pdf",
+            "img":"Constancia(2).jpg"
+        },
+        {
+            "constancia":"Cuidado de personas adultas mayores ante el COVID-19",
+            "pdf":"Constancia(3).pdf",
+            "img":"Constancia(3).jpg"
+        },
+        {
+            "constancia":"ABC De la Obesidad",
+            "pdf":"Constancia(4).pdf",
+            "img":"Constancia(4).jpg"
+        },
+        {
+            "constancia":"Cuidando tu corazón Hipertensión",
+            "pdf":"Constancia(5).pdf",
+            "img":"Constancia(5).jpg"
+        },
+        {
+            "constancia":"Estilo de vida y diabetes",
+            "pdf":"Constancia(6).pdf",
+            "img":"Constancia(6).jpg"
+        },
+        {
+            "constancia":"Aplicación de los criterios de vulnerabilidad ante COVID-19",
+            "pdf":"Constancia(7).pdf",
+            "img":"Constancia(7).jpg"
+        }
+    ]
+}

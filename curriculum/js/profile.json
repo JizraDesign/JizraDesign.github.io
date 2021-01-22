@@ -1,0 +1,76 @@
+{
+    "count":"1",
+    "nombre":"Alberto E. ",
+    "apellidos":"Hernández Cruz",
+    "foto":"photo.jpg",
+    "celular":"+525519662292",
+    "email":"jizradesign@gmail.com",
+    "rfc":"HECA841013HS0",
+    "secciones":[
+        {
+            "titulo":"EXPERENCIA PROFESIONAL",
+            "subtitulo":"",
+            "contenido":[
+                "Diseño front end HTML, CSS y JS con blog en PHP para consultorio medico independiente 2015.","Diseño front end HTML, CSS y JS para estudio de tatuajes con galería light box administrable desde CMS propietario 2015.","“Soporte técnico para el análisis, identificación y depuración de documentos” realizando la identificación y depuración del material para su ordenamiento por medio de claves para el software de uso exclusivo de COFETEL. 2010."
+            ]
+        },
+        {
+            "titulo":"ESTUDIOS UNIVERSITARIOS",
+            "subtitulo":"Universidad Autónoma Metropolitana, Unidad Iztapalapa (UAM-I).",
+            "contenido":[
+                "Licenciatura en Ingenieria quimica UAM-I (trunca)."
+            ]
+        },
+        {
+            "titulo":"CURSOS Y SEMINARIOS",
+            "subtitulo":"",
+            "contenido":[
+                ""
+
+            ]
+         }
+    ],
+    "skills":[
+        {
+            "titulo":"HTML 5",
+            "porcentaje":"98",
+            "icono":"html.png"
+        },
+        {
+            "titulo":"CSS 3",
+            "porcentaje":"95",
+            "icono":"css.png"
+        },
+        {
+            "titulo":"Java Script",
+            "porcentaje":"89",
+            "icono":"javascript.png"
+        },
+        {
+            "titulo":"Python",
+            "porcentaje":"65",
+            "icono":"python-logo.png"
+        },
+        {
+            "titulo":"Flask",
+            "porcentaje":"80",
+            "icono":"flask.png"
+        },
+        {
+            "titulo":"Java",
+            "porcentaje":"50",
+            "icono":""
+        },
+        {
+            "titulo":"PHP",
+            "porcentaje":"80",
+            "icono":""
+        },
+        {
+            "titulo":"Web sockets",
+            "porcentaje":"60",
+            "icono":""
+        }
+    ]
+    
+}

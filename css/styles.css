@@ -17,6 +17,11 @@
 html{
     scroll-behavior: smooth;
 }
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .darkTheme{
     /*-------dark theme----------*/
     --fondo: #18191A;
@@ -294,6 +299,9 @@ body{
     align-items: flex-start;
     flex-wrap: wrap;
 
+}
+.article:nth-child(2n){
+ background: #ccc;
 }
 .article__title{
     color: var(--texto);
@@ -606,7 +614,9 @@ input[type="submit"]{
 }
 .contacto{
     color: var(--texto-Scn);
-    background: var(--fondo-Cl);
+    background: url(../imagenes/background-whatsapp.jpg);
+    background-position: center center;
+    background-size: cover;
     border: solid 2px var(--fondo-Cl);
     border-radius: 5px;
     width: 90%;
