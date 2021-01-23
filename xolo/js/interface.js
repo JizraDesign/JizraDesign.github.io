@@ -2,6 +2,8 @@ let link=[];
 let links=[{
     "paginas":link
 }];
+console.log(links);
+
 fetch('js/constancias.json')
 .then(res => res.json())
 .then(data => {
@@ -16,9 +18,9 @@ fetch('js/constancias.json')
     
 })
 .catch(error => console.log('Error =>',error));
-console.log(links);
-
-window.addEventListener("load", () => {
+setTimeout(() => {
     let header = new Header("Expediente Xolo", links);
     header.header();
-})
+}, 500);
+
+
