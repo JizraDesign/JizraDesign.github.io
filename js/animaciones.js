@@ -83,38 +83,42 @@ navItem.forEach(btn=>{
         e.target.classList.add('active');
     });
 });
-// themes
-if(localStorage.getItem('theme') === 'dark'){
-    interruptorBtn.classList.remove('left');
-    interruptorBtn.classList.add('center');
-    document.body.classList.add('darkTheme');
-}else if(localStorage.getItem('theme') === 'light'){
-    interruptorBtn.classList.remove('left');
-    interruptorBtn.classList.add('right');
-    document.body.classList.add('clearTheme');
-}
-interruptor.addEventListener('click', e => {
-    theme();
-});
+
+// >>>>> -->>>>> ----- themes ----- <<<<<-- <<<<<
+
+localStorage.getItem('theme') === 'dark' ? darkTheme(true) : darkTheme(false);
+
+interruptor.addEventListener('click', theme);
 
 function theme(){
+    
     if(interruptorBtn.classList.contains('left')){
+        console.log('left');
+        
+        darkTheme(true);
+
+    }else{
+
+        darkTheme(false)
+
+    };
+};
+
+function darkTheme(dark){
+    if(dark === true){
         interruptorBtn.classList.remove('left');
-        interruptorBtn.classList.add('center');
-        document.body.classList.remove('clearTheme');
+        interruptorBtn.classList.add('right');
+        document.querySelector("#sun").setAttribute("class", "far fa-sun");
+        document.querySelector("#moon").setAttribute("class", "fas fa-moon active");
         document.body.classList.add('darkTheme');
         localStorage.setItem('theme', 'dark');
-    }else if(interruptorBtn.classList.contains('center')){
-        interruptorBtn.classList.remove('center');
-        interruptorBtn.classList.add('right');
-        document.body.classList.remove('darkTheme');
-        document.body.classList.add('clearTheme');
-        localStorage.setItem('theme', 'light');
-    }else if(interruptorBtn.classList.contains('right')){
+    }else{
         interruptorBtn.classList.remove('right');
         interruptorBtn.classList.add('left');
-        document.body.classList.remove('darkTheme');
-        document.body.classList.remove('clearTheme');
-        localStorage.setItem('theme', 'false');
+        document.querySelector("#sun").setAttribute("class", "fas fa-sun active");
+        document.querySelector("#moon").setAttribute("class", "far fa-moon");
+        document.body.removeAttribute("class");
+        localStorage.setItem('theme', '');
     };
+    
 };

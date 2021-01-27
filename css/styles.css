@@ -9,9 +9,10 @@
     --coloron: rgb(52, 102, 146);
     --colorLink: #f5f6f7;
 
-    --fondo: #000;              /*----->>>>>Fondo background<<<<<-----*/
-    --fondo-Cl: #E9EBEE;      /*----->>>>>Fondo de los elementos<<<<<-----*/
-    --texto: #E9EBEE;           /*----->>>>>Color principal texto<<<<<-----*/
+    --fondo:#F0F2F5;
+    --fondo-Cl: #FFFFFF;
+    --fondo-Med: #F0F2F5;
+    --texto:#18191A;
     --texto-Scn: #1c1e21;    /*----->>>>>Color secundario tesxto<<<<<-----*/
 }
 html{
@@ -26,14 +27,9 @@ html{
     /*-------dark theme----------*/
     --fondo: #18191A;
     --fondo-Cl: #242526;
+    --fondo-Med: #3A3B3C;
     --texto:#f5f6f7;
     --texto-Scn: #E9EBEE;
-}
-.clearTheme{
-    --fondo: #E9EBEE;
-    --fondo-Cl: #f5f6f7;
-    --texto:#18191A;
-    --texto-Scn: #1c1e21;
 }
 .cont__btn{
     display: flex;
@@ -141,7 +137,7 @@ body{
 }
 .nav__lista-opt{
     position: absolute;
-    width: 200px;
+    width: 150px;
     right: 0;
     bottom: 0;
     z-index: 15;
@@ -150,7 +146,7 @@ body{
 .nav__item-opt{
     display: flex;
     list-style: none;
-    color: #E9EBEE;
+    color:var(--texto-Scn);
     text-align: center;
     margin-bottom: 5px;
 }
@@ -178,14 +174,15 @@ body{
 .interruptor span.left{
     left: 3px;
 }
-.interruptor span.center{
-    left: 35%;
-}
 .interruptor span.right{
     left: calc( 100% - 18px);
 }
 .nav__item-opt>span{
-    margin-left: 5px;
+    margin:0 5px;
+}
+#sun.active,
+#moon.active{
+    color:orange;
 }
 /*----------------------------------------------------------------------------------------*/
 /*-----------------------------------------banner-----------------------------------------*/
@@ -287,28 +284,26 @@ body{
 /*---------------------------------------articulos----------------------------------------*/
 /*----------------------------------------------------------------------------------------*/
 .article{
-    width: 100%;
+    width: 90%;
     max-width: 1000px;
     min-height: 100vh;
-    margin: auto;
+    margin: 20px auto;
     padding: 20px 0;
+    border-radius: 5px;
     overflow-x: hidden;
-    background: var(--fondo);
+    background: var(--fondo-Cl);
 
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
 
 }
-.article:nth-child(2n){
- background: #ccc;
-}
 .article__title{
-    color: var(--texto);
-    padding: 0 20px;
-    font-size: 2em;
     width: 90%;;
-    margin-bottom: 20px;
+    color: var(--texto);
+    /* padding: 0 20px; */
+    font-size: 2em;
+    margin: 20px;
 }
 .article__parrafo{
     width: 90%;
@@ -321,12 +316,13 @@ body{
     background: var(--fondo-Cl);
 }
 .lista{
-    background: var(--fondo-Cl);
+    
     width: 90%;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 3% 20px;
     margin: 0 auto 50px auto;
     color: var(--texto-Scn);
+    background: var(--fondo-Med);
 }
 .lista__parrafo{
     width: 100%;
@@ -365,7 +361,7 @@ body{
     max-width: 1000px;
     background: var(--fondo-Cl);
     border-radius: 5px;
-    box-shadow: 0 0 10px 0 var(--texto);   
+    box-shadow:5px 5px 10px var(--texto);   
     margin: auto;
 }
 #btn-clouse-lbox{
@@ -409,7 +405,7 @@ body{
     flex-direction: column;
     margin: auto;
     border-radius: 5px;
-    box-shadow: 0 0 10px 0 var(--texto);
+    box-shadow: 5px 5px 10px var(--texto);
     transition: all 0.5s;
 }
 .banner__form-estados{
@@ -537,7 +533,7 @@ input[type="submit"]{
     flex-direction: column;
     margin: auto;
     border-radius: 5px;
-    box-shadow: 0 0 10px 0 var(--texto);
+    box-shadow: 5px 5px 10px var(--texto);
     transition: all 0.5s;
 }
 .imagen img{
@@ -613,19 +609,31 @@ input[type="submit"]{
     width: 100%;
 }
 .contacto{
+    position: relative;
+    z-index: 0;
     color: var(--texto-Scn);
-    background: url(../imagenes/background-whatsapp.jpg);
-    background-position: center center;
-    background-size: cover;
     border: solid 2px var(--fondo-Cl);
     border-radius: 5px;
     width: 90%;
     min-height: 40vh;
     margin: 0 auto;
-    position: relative;
-    box-shadow: 0px 10px 28px 0px var(--texto);
+    box-shadow: 5px 5px 10px var(--texto);
+    background: url(../imagenes/background-whatsapp.png);
+    background-position: center center;
+    background-size: cover;
+}
+.backgrond__contacto{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
 }
 .contacto__mensaje{
+    position: relative;
     padding: 20px;
     width: 100%;
     color: var(--texto-Scn);
@@ -697,21 +705,25 @@ input[type="submit"]{
     align-items: center;
     padding-top: 8px;
 }
-.contacto__input:focus {
-    border-bottom: solid 2px var(--texto);
+.contacto__input:focus,
+.contacto__input.active {
+    border-bottom: solid 2px #4fdf71;
 }
 #respuesta{
+    position: relative;
     width: 95%;
+    height: 0px;
     margin: auto;
     text-align: center;
     height: 0px;
     font-weight: 700;
     overflow: hidden;
+    transition: all 0.3s linear;
 }
 #respuesta.fail{
     padding: 5px;
     height: 30px;
-    background: rgb(255, 229, 246);
+    background: rgb(249 144 144 / 82%);
     color: var(--texto-Scn);
 }
 #respuesta.send{
@@ -721,7 +733,8 @@ input[type="submit"]{
     color: var(--texto-Scn);
 }
 .btn__form-contacto{
-    color: var(--texto-Scn);
+    position: relative;
+    color: rgb(190, 189, 189);
     width: 90%;
     height: 50px;
     text-align: center;
@@ -729,14 +742,26 @@ input[type="submit"]{
     border: solid 2px;
     margin:20px auto;
     cursor: pointer;
+    transition: all 0.3s linear;
+}
+.btn__form-contacto.active{
+    background:  #4fdf71;
+    color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+}
+.btn__form-contacto.active:hover{
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, .5);
 }
 /* >>>>> -->>>>> ----- slider ----- <<<<<-- <<<<< */
 #jd-carrusel{
-    box-shadow: 0 0 10px 0 var(--texto);
+    box-shadow: 5px 5px 10px var(--texto);
     border-radius: 5px;
     width: 90%!important;
     height: 60vh;
     margin: auto;
+    color: var(--texto-Scn);
+    background: var(--fondo-Cl);
 }
 .jd-item__carrusel{
     height: 100%;
@@ -746,27 +771,28 @@ input[type="submit"]{
     height: 40%;
 }
 .jd-title__carrusel {
-    color: var(--texto);
-    text-shadow: 0 0 5px rgba(0, 0, 0, .7);
+    color: var(--texto-Scn);
+    text-shadow: 0 0 2px rgba(0, 0, 0, .7);
 }
 .jd-paragraph__carrusel {
-    color: var(--texto);
+    color: var(--texto-Scn);
     padding: 10px;
-    text-shadow: 0 0 5px rgba(0, 0, 0, .7);
     text-align: justify;
 }
 .jd-cont__img{
-    width: 100%;
-    height: 70%;
-    
     display: flex;
     justify-content: center;
     align-items: center;
+
+    width: 100%;
+    height: 70%;
+
+    background: #000;
     overflow: hidden;
 }
 .jd-img__carrusel {
-    transform: translateY(-25%);
     width: 100%;
+    height: 100%;
     object-fit: contain;
 }
 .jd-item__carrusel>iframe{
@@ -780,6 +806,7 @@ input[type="submit"]{
     width: 90%;
     height: 600px;
     margin: auto;
+    box-shadow: 5px 5px 10px var(--texto);
 }
 /* >>>>> -->>>>> ----- postales ----- <<<<<-- <<<<< */
 #postales{
@@ -791,7 +818,7 @@ input[type="submit"]{
 }
 .cont__colecciones{
     align-self: flex-end;
-    box-shadow: 0 0 10px 0 var(--texto);
+    box-shadow: 5px 5px 10px var(--texto);
     width: 90%!important;
     max-width: 1000px;
     height: 90vh;
@@ -860,7 +887,7 @@ input[type="submit"]{
         padding: 15px;
         width: 200px;
         height: 80%;
-        box-shadow: 0px 5px 28px 0px var(--texto);
+        box-shadow: 5px 5px 10px var(--texto);
     }
     .contacto__mensaje-link:hover{
         color: #fff;

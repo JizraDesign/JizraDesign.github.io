@@ -74,10 +74,10 @@ function addInputEstados(data){
     inputEstados.setAttribute('value', data)
     inputEstados.innerHTML = data;
     estados.appendChild(inputEstados);
-}
+};
 function addInputMunicipios(data){
     let inputMunicipios = document.createElement('option');
     inputMunicipios.setAttribute('value', data)
     inputMunicipios.innerHTML = data;
     inputMunicipio.appendChild(inputMunicipios);
-}
+};

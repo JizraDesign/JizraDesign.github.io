@@ -1,18 +1,44 @@
-// contacto
+// >>>>> -->>>>> ----- contacto ----- <<<<<-- <<<<<
+
 const contactoInput = document.querySelectorAll('.contacto__input'),
     contactoLabel = document.querySelectorAll('.contacto__label'),
     contactoForm = document.querySelector('.contacto__form');
-//animaciones del label
+// >>>>> -->>>>> ----- animaciones label ----- <<<<<-- <<<<<
+
 for(let i = 0; i < contactoInput.length; i++){
+    
     contactoInput[i].addEventListener('keyup', () => {
         if(contactoInput[i].value != ''){
             contactoLabel[i].classList.add('active');
+            contactoInput[i].classList.add('active');
         }else{
             contactoLabel[i].classList.remove('active');
-        }
+            contactoInput[i].classList.remove('active');
+        };
+        valEnviar(contactoInput);
     });
+
 };
-//validar
+function valEnviar(iptGroup){
+    let iptCount = 0;
+    iptGroup.forEach(input => {
+        if(input.classList.contains("active")){
+            iptCount++;
+        }else{
+            iptCount--;
+        };
+    });
+    if(iptCount === iptGroup.length){
+        document.querySelector(".btn__form-contacto").classList.add("active");
+        
+    }else{
+        document.querySelector(".btn__form-contacto").classList.remove("active");
+    };
+    
+};
+
+// >>>>> -->>>>> ----- validar ----- <<<<<-- <<<<<
+
 const telCliente = document.querySelector("#tel");
 telCliente.addEventListener('keyup', () => {
     telCliente.value = telCliente.value.replace(/\D/g, "");
@@ -20,6 +46,9 @@ telCliente.addEventListener('keyup', () => {
         telCliente.value = telCliente.value.slice(0,10);
     };
 });
+
+// >>>>> -->>>>> -----  ----- <<<<<-- <<<<<
+
 contactoForm.addEventListener('submit', e => {
     e.preventDefault();
     //INGRESE UN NUMERO DE WHATSAPP VALIDO AQUI:
