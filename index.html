@@ -34,6 +34,8 @@
     <section class="banner">
         <header id="header" class="header">
             <div class="header__contenedor">
+                <h2 class="banner__title sub">Jizra<span class="banner__title-span"> Design</span></h2>
+                <i class="icono__menu fas fa-bars"></i>
                 <nav id="nav" class="nav">
                     <ul class="nav__lista">
                         <li class="nav__item"><a href="#galeria" class="nav__link">Galería</a></li>
@@ -64,7 +66,6 @@
             </svg>
         </div>
         <div class="cont__banner__title">
-            <h2 class="banner__title sub">Jizra<span class="banner__title-span"> Design</span></h2>
             <h1 class="banner__title">Diseño y programación<br><span class="banner__title-span">Web</span></h1>
             <h2 class="banner__title sub">(portalolio)</h2>
         </div>
@@ -270,6 +271,41 @@
                 </span>
             </p>
         </article>
+        <article class="article" id="juego-hoja-de-rol">
+            <h2 class="article__title">Una Hoja de juego de rol "Homínidos"</h2>
+            <ul class="item-left lista">
+                <p class="lista__parrafo">Tecnologías usadas</p>
+                <li class="lista__item"><span class="lista__icono">
+                    <img src="imagenes/python-logo.png" alt="python"></span>Python
+                </li>
+                <li class="lista__item"><span class="lista__icono">
+                    <img src="imagenes/flask.png" alt="flask"></span>Flask
+                </li>
+                <li class="lista__item">Flask-SocketIO</li>
+                <li class="lista__item">Flask-SQLAlchemy</li>
+                <li class="lista__item"><span class="lista__icono">
+                    <img src="imagenes/elephant.png" alt="PostgreSQL"></span>PostgreSQL
+                </li>
+                <li class="lista__item"><span class="lista__icono">
+                    <img src="imagenes/html.png" alt="HTML 5"></span>HTML 5
+                </li>
+                <li class="lista__item"><span class="lista__icono">
+                    <img src="imagenes/css.png" alt="CSS 3"></span>CSS 3
+                </li>
+                <li class="lista__item"><span class="lista__icono">
+                    <img src="imagenes/javascript.png" alt="JAVASCRIPT"></span>JavaScript
+                </li>
+                <div class="cont__btn">
+                    <a class="btn" href="https://hominidos.herokuapp.com" target="_blank" rel="noopener" title="Sitio web"><span class="text__btn">Sitio</span></a>
+                </div>
+            </ul>
+            <iframe class="item-rotate-left center cont_memorama personalizado"  src="https://hominidos.herokuapp.com" frameborder="0"></iframe>
+            <p class="article__parrafo">Hoja de rol con cambios en tiempo real desarrollado al 80% aproximadamente.</p>
+                <span class="cont__btn">
+                    <a class="btn" href="https://hominidos.herokuapp.com" target="_blank" rel="noopener"><span class="text__btn" title="Sitio web">Sitio</span></a>
+                </span>
+            </p>
+        </article>
     </section>
 
     <section class="colecciones postales" id="postales">
@@ -321,12 +357,44 @@
                         </span>
                     </p>
                 </article>
+                <article class="article postal__item" id="postal-love">
+                    <h1 class="article__title">Postal de san valentin 2021</h1>
+                    <iframe class="cont__postal"  src="https://jizradesign.github.io/san-valentin/" frameborder="0"></iframe>
+                        <span class="cont__btn">
+                            <a class="btn" href="https://jizradesign.github.io/san-valentin/" target="_blank" rel="noopener"><span class="text__btn">Sitio</span></a>
+                        </span>
+                    </p>
+                </article>
                 <script>
                     window.addEventListener('load', ()=> {
                         jdSider('#carrusel-postales', 'postal__item' ,'5000');
                     });
                 </script>
             </div>
+        </article>
+        <article class="article" id="juego-hoja-de-rol">
+            <h2 class="article__title">Generador de postales de temporada</h2>
+            <ul class="item-left lista">
+                <p class="lista__parrafo">Tecnologías usadas</p>
+                <li class="lista__item"><span class="lista__icono">
+                    <img src="imagenes/html.png" alt="HTML 5"></span>HTML 5
+                </li>
+                <li class="lista__item"><span class="lista__icono">
+                    <img src="imagenes/css.png" alt="CSS 3"></span>CSS 3
+                </li>
+                <li class="lista__item"><span class="lista__icono">
+                    <img src="imagenes/javascript.png" alt="JAVASCRIPT"></span>JavaScript
+                </li>
+                <div class="cont__btn">
+                    <a class="btn" href="https://jizradesign.github.io/postales/" target="_blank" rel="noopener" title="Sitio web"><span class="text__btn">Sitio</span></a>
+                </div>
+            </ul>
+            <iframe class="item-rotate-right center cont_memorama personalizado"  src="https://jizradesign.github.io/postales/" frameborder="0"></iframe>
+            <p class="article__parrafo">"Postales de temporada by Jizra Design" es un sistema de postales personalizadas.</p>
+                <span class="cont__btn">
+                    <a class="btn" href="https://jizradesign.github.io/postales/" target="_blank" rel="noopener"><span class="text__btn" title="Sitio web">Sitio</span></a>
+                </span>
+            </p>
         </article>
     </section>
     <section class="colecciones" id="contacto">

@@ -93,7 +93,6 @@ interruptor.addEventListener('click', theme);
 function theme(){
     
     if(interruptorBtn.classList.contains('left')){
-        console.log('left');
         
         darkTheme(true);
 
