@@ -579,6 +579,7 @@ input[type="submit"]{
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 100;
     transition: all 0.5s;
 }
 .btn__up.visible{
