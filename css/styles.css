@@ -5,18 +5,21 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)!important;
 }
 :root{
-    --coloroff: rgb(159, 191, 252);
-    --coloron: rgb(52, 102, 146);
-    --colorLink: #f5f6f7;
-
     --fondo:#F0F2F5;
     --fondo-Cl: #FFFFFF;
     --fondo-Med: #F0F2F5;
     --texto:#18191A;
     --texto-Scn: #1c1e21;    /*----->>>>>Color secundario tesxto<<<<<-----*/
+    
+    /* >>>>> -->>>>> ----- botones ----- <<<<<-- <<<<< */
+    
     --cont-Btb: rgb(255, 0, 106);
     --btn:rgb(255, 0, 106);
     --text__btn: white;
+
+    /* >>>>> -->>>>> ----- shadow ----- <<<<<-- <<<<< */
+    
+    --shadow: rgba(0,0,0,0.9);
 }
 html{
     scroll-behavior: smooth;
@@ -186,7 +189,7 @@ body{
     height: 20px;
     border: solid 1px #242526;
     border-radius: 15px;
-    background: #6eb4f5;
+    background: var(--btn);
     position: relative;
     transition: all .5s;
 }
@@ -391,7 +394,7 @@ body{
     max-width: 1000px;
     background: var(--fondo-Cl);
     border-radius: 5px;
-    box-shadow:5px 5px 10px var(--texto);   
+    box-shadow: 5px 5px 10px var(--shadow);   
     margin: auto;
 }
 #btn-clouse-lbox{
@@ -434,7 +437,7 @@ body{
     flex-direction: column;
     margin: auto;
     border-radius: 5px;
-    box-shadow: 5px 5px 10px var(--texto);
+    box-shadow: 5px 5px 10px var(--shadow);
     transition: all 0.5s;
 }
 .banner__form-estados{
@@ -561,7 +564,7 @@ input[type="submit"]{
     flex-direction: column;
     margin: auto;
     border-radius: 5px;
-    box-shadow: 5px 5px 10px var(--texto);
+    box-shadow: 5px 5px 10px var(--shadow);
     transition: all 0.5s;
 }
 .imagen img{
@@ -646,7 +649,7 @@ input[type="submit"]{
     width: 90%;
     min-height: 40vh;
     margin: 0 auto;
-    box-shadow: 5px 5px 10px var(--texto);
+    box-shadow: 5px 5px 10px var(--shadow);
     background: url(../imagenes/background-whatsapp.png);
     background-position: center center;
     background-size: cover;
@@ -784,7 +787,7 @@ input[type="submit"]{
 }
 /* >>>>> -->>>>> ----- slider ----- <<<<<-- <<<<< */
 #jd-carrusel{
-    box-shadow: 5px 5px 10px var(--texto);
+    box-shadow: 5px 5px 10px var(--shadow);
     border-radius: 5px;
     width: 90%!important;
     height: 60vh;
@@ -835,7 +838,7 @@ input[type="submit"]{
     width: 90%;
     height: 600px;
     margin: auto;
-    box-shadow: 5px 5px 10px var(--texto);
+    box-shadow: 5px 5px 10px var(--shadow);
 }
 /* >>>>> -->>>>> ----- postales ----- <<<<<-- <<<<< */
 #postales{
@@ -847,7 +850,7 @@ input[type="submit"]{
 }
 .cont__colecciones{
     align-self: flex-end;
-    box-shadow: 5px 5px 10px var(--texto);
+    box-shadow: 5px 5px 10px var(--shadow);
     width: 90%!important;
     max-width: 1000px;
     height: 90vh;
