@@ -60,7 +60,7 @@ function header(){
         link.setAttribute('title', 'Comparte en facebook');
         link.setAttribute('href', 'https://www.facebook.com/sharer/sharer.php?u='+url);
     let iconLInk = link.appendChild(document.createElement('i'));
-        iconLInk.setAttribute('class', 'compartir_btn compartir_btn_facebook fa fa-facebook');
+        iconLInk.setAttribute('class', 'compartir_btn compartir_btn_facebook fab fa-facebook');
     // >>>>> -->>>>> ----- btn twiter ----- <<<<<-- <<<<<
     link = contHeader.appendChild(document.createElement('a'));
         link.setAttribute('class', 'twitter-share-button');
@@ -71,7 +71,7 @@ function header(){
         link.setAttribute('data-text', '');
         link.setAttribute('data-via', 'jizraDesign');
     iconLInk = link.appendChild(document.createElement('i'));
-        iconLInk.setAttribute('class', 'compartir_btn compartir_btn_twitter fa fa-twitter');
+        iconLInk.setAttribute('class', 'compartir_btn compartir_btn_twitter fab fa-twitter');
     // >>>>> -->>>>> ----- btn whatsapp ----- <<<<<-- <<<<<
     link = contHeader.appendChild(document.createElement('a'));
         link.setAttribute('class', '');
@@ -79,7 +79,7 @@ function header(){
         link.setAttribute('title', 'Comparte en whatsapp');
         link.setAttribute('href', 'whatsapp://send?text=' + url);
     iconLInk = link.appendChild(document.createElement('i'));
-        iconLInk.setAttribute('class', 'compartir_btn compartir_btn_whatsapp fa fa-whatsapp')
+        iconLInk.setAttribute('class', 'compartir_btn compartir_btn_whatsapp fab fa-whatsapp')
 };
 function footer(){
     const footer = document.querySelector('#footer');
